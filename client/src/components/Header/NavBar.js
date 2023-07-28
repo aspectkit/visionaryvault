@@ -1,28 +1,33 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './NavBar.css';
+import React, { useEffect, useState } from 'react'
+import { Link, useLocation } from 'react-router-dom';
+import "../styles/Navbar.css";
+import ReorderTwoToneIcon from '@mui/icons-material/ReorderTwoTone';
 
-const NavBar = () => {
-    return (
-        <div className = "header">
-            {/* Logo */}
-            <Link className = "nav-title" to="/">
-                <img className = "nav-logo" src={ "/logo192.png" } alt="React logo" />
-            </Link>
+function Navbar() {
+    const [expandNavbar, setExpandNavBar] = useState(false);
 
-            {/* Page Links */}
-            <div className = "nav-items">
-                <Link className = "nav-link" to='/Home'>Home</Link>
-                <Link className = "nav-link" to='/Register'>Extra Page</Link>
-                <a className = "nav-link" target='_blank' rel="noopener noreferrer" href="https://reactjs.org/docs/getting-started.html">
-                    React Docs
-                </a>
-                <a className = "nav-link" target="_blank" rel="noopener noreferrer" href="https://reactjs.org/tutorial/tutorial.html">React Tutorial</a>
-                <a className = "nav-link" target="_blank" rel="noopener norefferer" href="https://nodejs.org/en/docs/">Node Docs</a>
-            </div>
+    const location = useLocation();
 
+    useEffect(() => {
+        setExpandNavBar(false)
+    }, [location]);
+
+  return (
+    <div className='navbar' id={expandNavbar ? 'open' : 'close'}>
+        <div className='toggleButton'>
+            <button onClick={() => {setExpandNavBar((prev) => !prev)}}> 
+                <ReorderTwoToneIcon />
+            </button>
         </div>
-    )
-};
+        <div className='links'>
+            <Link className='pop' to="/"> Home </Link>
+            <Link className='pop' to="/about"> About </Link>
+            <Link className='pop' to="/projects"> Projects </Link>
+            <Link className='pop' to="/experience"> Experience </Link>
+            <Link className='pop' to="/contact"> Contact </Link>
+        </div>
+    </div>
+  );
+}
 
-export default NavBar;
+export default Navbar
