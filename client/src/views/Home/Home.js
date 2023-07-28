@@ -1,25 +1,26 @@
 import React from 'react';
-import logo from '../../assets/logo.svg';
 import './Home.css';
 
-function Home() {
-    return (
-        <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <p>
-                    Edit <code>src/App.js</code> and save to reload.
-                </p>
-                <a
-                    className="App-link"
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                </a>
-            </header>
-        </div>
-    );
-}
+const HomePage = () => {
 
-export default Home;
+  return (
+    <div className="homePageContainer">
+      <nav className="navbar">
+        {/* Add your navbar/header content here */}
+      </nav>
+
+      {/* Middle/right side artist showcases */}
+      <div className="artist-showcases">
+        {artistShowcases.map((artist) => (
+          <div key={artist.id} className="artist-showcase">
+            <img src={artist.imageUrl} alt={artist.name} />
+            <h3>{artist.name}</h3>
+            <p>{artist.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default HomePage;
