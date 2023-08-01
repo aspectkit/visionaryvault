@@ -1,8 +1,5 @@
-//This file holds any configuration variables we may need
-//'config.js' is usually ignored by git to protect sensitive information, such as your database's username and password
+const {connect, connection} = require('mongoose');
+connect('mongodb://127.0.0.1:27017/visonaryVault');
 
-module.exports = {
-    db: {
-        uri: '', //place the URI of your mongo database here.
-    }
-};
+module.exports = connection;
+
