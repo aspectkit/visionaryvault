@@ -1,8 +1,9 @@
-const examples = require('../controllers/userController.js'),
-    express = require('express'), 
-    router = express.Router()
+const router = require('express').Router();
+const apiRoutes = require('./api');
 
-router.route('/')
-  .get(examples.hello);
+
+router.use('/api', apiRoutes);
+router.route((req,res) =>
+ res.status(404).send('404 nerd')); 
   
 module.exports = router;
