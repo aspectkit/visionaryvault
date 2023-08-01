@@ -1,4 +1,4 @@
-const path = require('path'),
+/* const path = require('path'),
     express = require('express'),
     mongoose = require('mongoose'),
     morgan = require('morgan'),
@@ -9,7 +9,8 @@ module.exports.init = () => {
     /* 
         connect to database
         - reference README for db uri
-    */
+    */ 
+   /*
     mongoose.connect(process.env.DB_URI || require('./config').db.uri, {
         useNewUrlParser: true
     });
@@ -39,5 +40,5 @@ module.exports.init = () => {
     }
 
     return app
-}
+} */
 
