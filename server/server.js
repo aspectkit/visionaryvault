@@ -4,8 +4,8 @@ const routes = require('./routes');
 const mongoose = require('mongoose');
 
 const cwd = process.cwd();
-const artist = require('./models/artist');
-const customer = require('./models/customer');
+const artist = require('./models/Artist');
+const customer = require('./models/Customer');
 const { ApolloServer } = require('apollo-server-express');
 const { typeDefs, resolvers } = require('./schemas');
 const app = express();
