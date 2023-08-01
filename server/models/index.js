@@ -1,5 +1,5 @@
 
-const Artist = require("./artist"); 
+const Artist = require("./Artist"); 
 const Artwork = require("./Artwork");
 
 const Customer = require("./Customer");
