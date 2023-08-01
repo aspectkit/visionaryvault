@@ -8,10 +8,13 @@ import Footer from './components/Footer';
 import About from './pages/About';
 import Contact from './pages/Contact'
 import React from 'react';
+import { ChakraProvider } from '@chakra-ui/react'
 
 
 function App() {
   return (
+    
+    <ChakraProvider>
     <div className="App">
       <Router 
         basename={process.env.NODE_ENV === 'development' ? '' : '/trace-martin-rport'}>
@@ -28,6 +31,7 @@ function App() {
         <Footer />
       </Router>
     </div>
+    </ChakraProvider>
   );
 }
 
