@@ -32,12 +32,16 @@ const artworkSchema = new mongoose.Schema({
       "acrylic",
       "pencil",
       "sculpture",
+      "photography",
       "other",
     ],
   },
   images: [{ type: String }], // Array of image URLs or paths
+  price: { type: Number }, // Optional price for the artwork
+  isCommissioned: { type: Boolean, default: false }, // Indicates whether the artwork is currently being commissioned
+  artist: { type: mongoose.Schema.Types.ObjectId, ref: "Artist" }, // Reference to the artist who created the artwork
+  customer: { type: mongoose.Schema.Types.ObjectId, ref: "Customer" }, // Reference to the customer who commissioned the artwork (optional)
 });
-
 
 const Artwork = mongoose.model("Artwork", artworkSchema);
 

@@ -7,7 +7,35 @@ const artistSchema = new mongoose.Schema({
     nickname: { type: String },
   },
   description: {
-    styleOfArt: { type: String, required: true },
+    styleOfArt: [
+      {
+        type: String,
+        enum: [
+          // Digital Art Options
+          "digital photography",
+          "digital installations",
+          "algorithmic art",
+          "datamoshing",
+          "dynamic painting",
+          "2D computer graphics",
+          "3D computer graphics",
+          "pixel art",
+          "photo painting",
+          "digital collage",
+          "digital painting",
+          "manual vector drawing",
+          "raster painting",
+          // Traditional Art Options
+          "oil",
+          "watercolor",
+          "acrylic",
+          "pencil",
+          "sculpture",
+          "other",
+        ],
+        required: true,
+      },
+    ],
     artistProfile: { type: String, required: true },
   },
   contactInformation: {
@@ -21,7 +49,6 @@ const artistSchema = new mongoose.Schema({
     minPrice: { type: Number, required: true },
     maxPrice: { type: Number, required: true },
   },
-
   username: { type: String, required: true },
   password: { type: String, required: true },
 });
