@@ -14,7 +14,8 @@ import {
     Heading,
     Text,
     useColorModeValue,
-    Link
+    Link,
+    Select
 } from '@chakra-ui/react'
 
 import {useState} from 'react'
@@ -66,6 +67,12 @@ export default function SignupCard(){
                                 </InputRightElement>
                             </InputGroup>
                         </FormControl>
+                        <Stack spacing={10} pt={2}>
+                            <Select placeholder='Select option that most closely represents yourself' variant={'filled'} icon={<MdArrowDropDown />}>
+                                <option value='artist'>Artist who wants to sell commissions</option>
+                                <option value='buyer'>Person who is interested in buying commissions</option>
+                            </Select>
+                        </Stack>
                         <Stack spacing={10} pt={2}>
                             <Button loadingText="Submitting" size="lg" bg={'blue.400'} color={'white'} hover={{bg: 'blue.500',}}>
                                 Sign Up
