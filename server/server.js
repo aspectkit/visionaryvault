@@ -1,7 +1,21 @@
-const express = require('./config/express.js')
+const express = require('express');
+const db = require('./config/config');
+const routes = require('./routes');
+const mongoose = require('mongoose');
  
-// Use env port or default
-const port = process.env.PORT || 5000;
+const cwd = process.cwd();
+const user = require('./models/user');
 
-const app = express.init()
-app.listen(port, () => console.log(`Server now running on port ${port}!`));
+const app = express();
+
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(routes);
+const port = 3001;
+
+db.once('open', () => {
+ app.listen(port, () => {
+ console.log(`Server now running on port ${port}!`);
+ console.log(`cwd:${cwd}`);
+});
+})
