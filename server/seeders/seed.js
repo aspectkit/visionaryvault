@@ -9,11 +9,6 @@ const customerSeeds = require("./seeders/customerSeeds.json");
 
 const databaseUrl = "mongodb://127.0.0.1:27017/visonaryVault";
 
-mongoose.connect(databaseUrl, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
-
 db.once("open", async () => {
   try {
     console.log("Connected to the database");
@@ -32,11 +27,30 @@ db.once("open", async () => {
 
     // Close the database connection after seeding data
     mongoose.connection.close();
-
     console.log("all done!");
-    process.exit(0);
   } catch (error) {
     console.error("Error seeding data:", error);
-    process.exit(1);
   }
 });
+
+mongoose
+  .connect(databaseUrl, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => {
+    console.log("Connected to the database");
+
+    // Insert artists
+    Artist.insertMany(artistSeeds)
+      .then((artists) => console.log("Artists inserted:", artists))
+      .catch((error) => console.error("Error inserting artists:", error));
+
+    // Insert artwork
+    Artwork.insertMany(artworkSeeds)
+      .then((artworks) => console.log("Artwork inserted:", artworks))
+      .catch((error) => console.error("Error inserting artwork:", error));
+
+    // Insert customers
+    Customer.insertMany(customerSeeds)
+      .then((customers) => console.log("Customers inserted:", customers))
+      .catch((error) => console.error("Error inserting customers:", error));
+  })
+  .catch((error) => console.error("Error connecting to the database:", error));
