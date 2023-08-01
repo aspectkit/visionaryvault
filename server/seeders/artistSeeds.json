@@ -1,0 +1,26 @@
+[
+  {
+    "artistName": {
+      "firstName": "Tyler",
+      "lastName": "Smith",
+      "nickname": "Banksy"
+    },
+    "description": {
+      "styleOfArt": "other",
+      "artistProfile": "A mysterious street artist known for their thought-provoking and politically charged graffiti artworks."
+    },
+    "contactInformation": {
+      "email": "banksy@example.com",
+      "phoneNumber": "555-123-4567",
+      "country": "United Kingdom",
+      "address": "London, UK"
+    },
+    "artwork": [],
+    "commissionPriceRange": {
+      "minPrice": 500,
+      "maxPrice": 5000
+    },
+    "username": "banksy_artist",
+    "password": "securepassword"
+  }
+]

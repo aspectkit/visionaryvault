@@ -1,0 +1,17 @@
+[
+  {
+    "firstName": "John",
+    "lastName": "Doe",
+    "nickname": "",
+    "username": "johndoe123",
+    "password": "password123",
+    "contactInformation": {
+      "email": "john.doe@example.com",
+      "phoneNumber": "123-456-7890",
+      "country": "United States",
+      "address": "123 Main Street"
+    },
+    "favoriteArtists": [],
+    "hasCommissionedArt": false
+  }
+]

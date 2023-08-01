@@ -1,0 +1,34 @@
+[
+  {
+    "title": "The Starry Night",
+    "year": 1889,
+    "type": "traditional",
+    "medium": "oil",
+    "images": ["https://example.com/artwork/starry_night.jpg"],
+    "price": 1500,
+    "artist": "artist_id_here",
+    "customer": "customer_id_here",
+    "isCommissioned": false
+  },
+  {
+    "title": "Mona Lisa",
+    "year": 1503,
+    "type": "traditional",
+    "medium": "oil",
+    "images": ["https://example.com/artwork/mona_lisa.jpg"],
+    "price": 2000,
+    "artist": "artist_id_here",
+    "customer": "customer_id_here",
+    "isCommissioned": true
+  },
+  {
+    "title": "Abstract Composition",
+    "year": 1920,
+    "type": "digital",
+    "medium": "digital painting",
+    "images": ["https://example.com/artwork/abstract_composition.jpg"],
+    "price": null,
+    "artist": "artist_id_here",
+    "isCommissioned": false
+  }
+]
