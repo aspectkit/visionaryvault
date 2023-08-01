@@ -70,7 +70,7 @@ export default function SignupCard(){
                         <Stack spacing={10} pt={2}>
                             <Select placeholder='Select option that most closely represents yourself' variant={'filled'} icon={<MdArrowDropDown />}>
                                 <option value='artist'>Artist who wants to sell commissions</option>
-                                <option value='buyer'>Person who is interested in buying commissions</option>
+                                <option value='buyer'>Client who is interested in buying commissions</option>
                             </Select>
                         </Stack>
                         <Stack spacing={10} pt={2}>
