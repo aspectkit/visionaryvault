@@ -6,8 +6,6 @@
     "medium": "oil",
     "images": ["https://example.com/artwork/starry_night.jpg"],
     "price": 1500,
-    "artist": "artist_id_here",
-    "customer": "customer_id_here",
     "isCommissioned": false
   },
   {
@@ -17,8 +15,6 @@
     "medium": "oil",
     "images": ["https://example.com/artwork/mona_lisa.jpg"],
     "price": 2000,
-    "artist": "artist_id_here",
-    "customer": "customer_id_here",
     "isCommissioned": true
   },
   {
@@ -28,7 +24,6 @@
     "medium": "digital painting",
     "images": ["https://example.com/artwork/abstract_composition.jpg"],
     "price": null,
-    "artist": "artist_id_here",
     "isCommissioned": false
   }
 ]
