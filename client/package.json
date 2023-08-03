@@ -2,6 +2,21 @@
   "name": "react_template_repo",
   "version": "0.1.0",
   "private": true,
+<<<<<<< HEAD
+=======
+  "dependencies": {
+    "@apollo/client": "^3.6.9",
+    "@chakra-ui/react": "^2.8.0",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "framer-motion": "^10.15.0",
+    "graphql": "^16.6.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.14.2",
+    "react-scripts": "^5.0.1"
+  },
+>>>>>>> 39992f32d5c3d468e7ea811ecbcd80ab4a4cba13
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
