@@ -5,7 +5,9 @@
       "lastName": "Smith",
       "nickname": "Banksy"
     },
-    "description": {
+    "artistPicture": "https://drive.google.com/file/d/1e_A_in8D2zWEoN3ySPKnup2AxqMHIDEM/view?usp=sharing",
+
+    "artistDescription": {
       "styleOfArt": "other",
       "artistProfile": "A mysterious street artist known for their thought-provoking and politically charged graffiti artworks."
     },
@@ -22,5 +24,30 @@
     },
     "username": "banksy_artist",
     "password": "securepassword"
+  },
+  {
+    "artistName": {
+      "firstName": "Trace",
+      "lastName": "Martin",
+      "nickname": "Lobster Legs Jerry"
+    },
+    "artistPicture": "https://drive.google.com/file/d/1gfeyDCRH7L5PVusAkHhJ3K0xoqzqEjxP/view?usp=sharing",
+    "artistDescription": {
+      "styleOfArt": "pencil",
+      "artistProfile": "Combines teaching, coding, and fatherhood to make a spectacular messy art.."
+    },
+    "contactInformation": {
+      "email": "fakeemail@example.com",
+      "phoneNumber": "535-143-4567",
+      "country": "Fiji",
+      "address": "123 Comefindme Way"
+    },
+    "artwork": [],
+    "commissionPriceRange": {
+      "minPrice": 1,
+      "maxPrice": 5
+    },
+    "username": "bigT",
+    "password": "1234"
   }
 ]

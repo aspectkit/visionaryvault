@@ -1,12 +1,13 @@
-const mongoose = require("mongoose");
+const { Schema, model } = require("mongoose");
 
-const artistSchema = new mongoose.Schema({
+const artistSchema = new Schema({
   artistName: {
     firstName: { type: String, required: true },
     lastName: { type: String, required: true },
     nickname: { type: String },
   },
-  description: {
+  artistPicture: { type: String }, // Array of image URLs or paths
+  artistDescription: {
     styleOfArt: [
       {
         type: String,
@@ -44,7 +45,7 @@ const artistSchema = new mongoose.Schema({
     country: { type: String, required: true },
     address: { type: String, required: true },
   },
-  artwork: [{ type: mongoose.Schema.Types.ObjectId, ref: "Artwork" }],
+  artwork: [{ type: Schema.Types.ObjectId, ref: "Artwork" }],
   commissionPriceRange: {
     minPrice: { type: Number, required: true },
     maxPrice: { type: Number, required: true },
@@ -53,6 +54,6 @@ const artistSchema = new mongoose.Schema({
   password: { type: String, required: true },
 });
 
-const Artist = mongoose.model("Artist", artistSchema);
+const Artist = model("Artist", artistSchema);
 
 module.exports = Artist;
