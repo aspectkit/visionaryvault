@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import './Navbar.css'
+import './NavBar.css'
 
 const Search = () => {
     const [searchInput, setSearchInput] = useState("");

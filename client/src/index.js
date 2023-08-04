@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 // import * as serviceWorker from "./serviceWorker";
 import App from "./App";
-import { ChakraProvider } from "@chakra-ui/react";
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -12,7 +12,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 // serviceWorker.unregister();
 
 root.render(
-  <ChakraProvider>
+
     <App />
-  </ChakraProvider>
+
 );

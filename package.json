@@ -23,7 +23,8 @@
   "author": "Dakota Rennemann",
   "license": "MIT",
   "dependencies": {
-    "concurrently": "^4.1.0"
+    "concurrently": "^4.1.0",
+    "nodemon": "^3.0.1"
   },
   "homepage": "https://github.com/UFWebApps/React_Template_Repo#readme"
 }
