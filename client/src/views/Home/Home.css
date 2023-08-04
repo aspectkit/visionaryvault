@@ -1,27 +1,133 @@
-body {
-    margin: 0;
+.homeContainer {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 210px;
+  padding: 20px;
 }
 
-.App {
-    text-align: center;
-    background: #282c34;
+.artistContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  height: 400px;
+  border: 1px solid black;
+  border-radius: 20px;
+  margin: 20px;
+  padding: 20px;
 }
 
-.App-logo {
-    height: 40vmin;
+.artistName {
+  position: absolute;
+  top: 20px;
+  left: 10%;
+  transform: translateX(-50%);
+  z-index: 2;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
-.App-header {
-    background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+.artistProfileImage {
+  position: absolute;
+  top: 17%;
+  left: 2%;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid rgb(0, 0, 0);
 }
 
-.App-link {
-    color: #09d3ac;
+.artistArtWork {
+  width: 350px;
+  height: 180px;
+  border: 1px solid black;
+  border-radius: 10px;
+  object-fit: cover;
+  margin: 1px;
 }
+
+.artworkContainer {
+  left: 29px;
+  width: 70%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  margin-left: 25%;
+  background-color: rgb(175, 175, 247);
+}
+
+.artistDescription {
+  position: absolute;
+  border: 1px solid black;
+  width: 27.5%;
+  height: 40%;
+  left: .5%;
+  top: 58%;
+}
+
+/* .homeContainer {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 210px;
+  padding: 20px;
+}
+
+.artistContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  height: 400px;
+  border: 1px solid black;
+  border-radius: 20px;
+  margin: 20px;
+  padding: 20px;
+}
+
+.artistName {
+  position: absolute;
+  top: 20px;
+  left: 8%;
+  transform: translateX(-50%);
+  z-index: 2;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.artistProfileImage {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid rgb(0, 0, 0);
+}
+
+.descriptionContainer {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.artistDescription {
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.artworkContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.artistArtWork {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  border-radius: 10px;
+  object-fit: cover;
+  margin: 1px;
+} */

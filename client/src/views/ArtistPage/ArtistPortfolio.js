@@ -1,7 +1,7 @@
 import React from 'react';
-import { useQuery, gql } from '@apollo/client';
-import './Artists.css';
-
+import { useQuery } from '@apollo/client';
+// import './Artists.css';
+// import { gql } from '@apollo/client';
 const GET_ARTISTS = [];
 
 const UserPage = () => {

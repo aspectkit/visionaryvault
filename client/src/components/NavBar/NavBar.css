@@ -1,38 +1,281 @@
-.header {
-    background: #282c34;
+.navbar {
+  /* Remove the fixed width */
+  width: 200px;
+  height: 100vh;
+  background: #000000;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Change to flex-start */
+  color: white;
+}
+
+/* Remove unnecessary CSS */
+/* .links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+} */
+
+/* Update the CSS for navbar a */
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 20px;
+  font-size: 25px;
+}
+
+/* Add a class for the title to style it separately */
+.title {
+  color: rgb(145, 128, 255);
+  font-size: 30px;
+}
+
+/* Add a class for the toggleButton to style it separately */
+.toggleButton {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* Update the toggleButton button */
+.toggleButton button {
+  margin-right: 150px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Remove the unused styles */
+/* #open .links {
+  margin: 10px;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-size: 20px;
+} */
+
+/* #open .links {
+  max-height: 300px;
+  animation: fade-in 7s;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#open .links:hover {
+  color: #000000;
+  transition: 2s;
+}
+
+#collapsed {
+  transition: 2.5s;
+}
+
+#open a {
+  width: 75%;
+  text-align: center;
+}
+
+@media only screen and (max-width: 900px) {
+  .navbar a {
     display: flex;
+  }
+  .logoOverlay {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .toggleButton {
+    display: flex;
+  }
+  #collapsed a {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .toggleButton {
+    display: none;
+  }
+
+  .hiddenLinks {
+    display: none;
+  }
+
+  #open {
+    height: 100px;
+  }
+
+  #open .links {
     flex-direction: row;
-    justify-content: flex-start;
-    padding: 1%;
+  }
+} */
+
+
+
+
+
+/* .navbar {
+  width: 200px;
+  height: 100vh;
+  background: #000000;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.title {
+  color: rgb(145, 128, 255);
+  font-size: 30px;
+
 }
 
-.nav-logo {
-    display:flex;
-    height: 50px;
-    width: 50px;
-    padding: 10%;
+.SearchButton {
+  background-color: rgb(253, 0, 0);
+}
+ 
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
 }
 
-.nav-logo:hover {
-
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 20px;
+  font-size: 25px;
 }
 
-.nav-items {
-    display:flex;
-    margin-left: auto;
-    margin-right: 5%;
+  .pop { 
+    transition: all .2s ease-in-out; 
+    transition: color 1s;
+  }
+  
+  .pop:hover { 
+    transform: scale(1.1);
+    color: rgb(169, 102, 231); 
+  }
+
+  
+  .toggleButton {
+    width: 100%;
+    height: 100px;
+    display: flex;
     align-items: center;
-}
-
-.nav-link {
-    background-color: #09d3ac;
-    color: black;
-    padding: 14px 25px;
+    justify-content: flex-end;
+  }
+  
+  
+  .toggleButton button {
+    margin-right: 150px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  #open {
+    display: flex;
+    height: 60vh;
+  }
+  #open:hover {
+    background-color: rgb(126, 31, 216);
+    transition: 2s;
+  }
+  #open .links {
+    margin: 10px;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-size: 20px;
+  
+  }
+  
+  #open .links {
+    max-height: 300px;
+    animation: fade-in 7s;
+  }
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  #open .links:hover {
+  color: #000000;
+  transition: 2s;
+  }
+  
+  #collapsed {
+    transition: 2.5s;
+  }
+  
+  #open a {
+    width: 75%;
     text-align: center;
-    text-decoration: none;
-}
+  }
+  
+  @media only screen and (max-width: 900px) {
+    .navbar a {
+      display: flex;
+    }
+    .logoOverlay {
+      display: none;
+    }
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .toggleButton {
+      display: flex;
+    }
+    #collapsed a {
+      display: none;
+    }
+  }
+  
+  @media only screen and (min-width: 600px) {
+    .toggleButton {
+      display: none;
+    }
+  
+    .hiddenLinks {
+      display: none;
+    }
+  
+    #open {
+      height: 100px;
+    }
+  
+    #open .links {
+      flex-direction: row;
+    }
+  }
 
-.nav-link:hover {
-    background-color: #08bd9a;
-}
-
+  .Sidebar {
+    height: 100vh;
+    width: 200px;
+    background-color: orchid;
+  } */
