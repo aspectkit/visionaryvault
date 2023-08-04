@@ -1,8 +1,6 @@
-import './Navbar.css';
-// import { NavbarData } from './NavbarData';
+import './NavBar.css';
 import React, { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom';
-import "./Navbar.css";
 import ReorderTwoToneIcon from '@mui/icons-material/ReorderTwoTone';
 import Search from './SearchBar';
 
