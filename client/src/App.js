@@ -1,25 +1,20 @@
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import {
-  ApolloClient,
-  InMemoryCache,
-  ApolloProvider,
-  createHttpLink,
-} from "@apollo/client";
+import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
+import { ChakraProvider } from "@chakra-ui/react";
+import NavBar from "./components/NavBar/NavBar";
+import Home from "./views/Home/Home";
+// import ArtistPage from "./views/ArtistPage/ArtistPage";
+import Gallery from "./views/Gallery/Gallery";
+import About from "./views/About/About";
+import Support from "./views/Support/Support";
 
-import Home from "./components/Home/home";
-// import Experience from "./pages/Experience";
-// import Projects from "./pages/Projects";
-// import NavBar from "./components/NavBar/";
-// import Footer from "./components/Footer";
-// import About from "./pages/About";
-// import Contact from "./pages/Contact";
-// import React from "react";
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
   uri: "/graphql",
 });
+
 // Construct request middleware that will attach the JWT token to every request as an `authorization` header
 const authLink = setContext((_, { headers }) => {
   // get the authentication token from local storage if it exists
@@ -32,6 +27,7 @@ const authLink = setContext((_, { headers }) => {
     },
   };
 });
+
 const client = new ApolloClient({
   // Set up our client to execute the `authLink` middleware prior to making the request to our GraphQL API
   link: authLink.concat(httpLink),
@@ -41,15 +37,18 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-      <Router>
-        {/* <NavBar /> */}
-
-        <Switch>
-          <Route path="/" element={<Home />} />
-        </Switch>
-
-        {/* <Footer /> */}
-      </Router>
+      <ChakraProvider>
+        <Router>
+          <NavBar />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            {/* <Route path="/artistPage" component={ArtistPage} /> */}
+            <Route path="/gallery" component={Gallery} />
+            <Route path="/about" component={About} />
+            <Route path="/support" component={Support} />
+          </Switch>
+        </Router>
+      </ChakraProvider>
     </ApolloProvider>
   );
 }

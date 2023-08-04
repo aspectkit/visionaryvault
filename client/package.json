@@ -2,23 +2,25 @@
   "name": "react_template_repo",
   "version": "0.1.0",
   "private": true,
-<<<<<<< HEAD
-=======
   "dependencies": {
     "@apollo/client": "^3.6.9",
     "@chakra-ui/react": "^2.8.0",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.14.1",
+    "@mui/material": "^5.14.1",
+    "axios": "^1.4.0",
     "framer-motion": "^10.15.0",
     "graphql": "^16.6.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-pro-sidebar": "^1.1.0-alpha.1",
     "react-router-dom": "^6.14.2",
     "react-scripts": "^5.0.1"
+    
   },
->>>>>>> 39992f32d5c3d468e7ea811ecbcd80ab4a4cba13
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -41,26 +43,8 @@
   "devDependencies": {
     "react-router-dom": "^5.1.2",
     "concurrently": "^8.2.0"
-  },
-  "dependencies": {
-    "concurrently": "^4.1.0",
-    "nodemon": "^1.18.10",
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1",
-    "mongoose": "^5.7.1",
-    "morgan": "^1.9.1",
-    "should": "^13.2.3",
-    "supertest": "^4.0.2",
-    "mocha": "^6.2.1",
-    "apollo-server-express": "^2.9.6",
-    "graphql": "^14.5.8",
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "apollo-boost": "^0.4.9",
-    "react-bootstrap": "^2.8.0",
-    "react-scripts": "^5.0.1",
-    "react-router-dom": "^6.2.1",
-    "react-dom": "^16.13.1"
   }
-  }
+}
+ 
 
 
