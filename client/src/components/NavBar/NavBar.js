@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom';
 import ReorderTwoToneIcon from '@mui/icons-material/ReorderTwoTone';
 import Search from './SearchBar';
+import '../Wrapper/Wrapper.css';
 
 function Navbar() {
   const [expandNavbar, setExpandNavBar] = useState(false);
@@ -14,16 +15,16 @@ function Navbar() {
   }, [location]);
 
 return (
-    <div className='Sidebar'>
+    <div className='navbarContainer'>
       <div className='navbar' id={expandNavbar ? 'open' : 'collapsed'}>
           <div className='toggleButton'>
               <button onClick={() => {setExpandNavBar((prev) => !prev)}}> 
                   <ReorderTwoToneIcon />
               </button>
           </div>
-          <div className='navbar'>
+          <div className='links'>
           <div className='title'>Visionary Vault</div>
-            <Search />
+            {/* <Search /> */}
             <Link className='pop' to="/"> Home </Link>
             <Link className='pop' to="/artist"> Artist </Link>
             <Link className='pop' to="/gallery"> Gallery </Link>
