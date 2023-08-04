@@ -29,5 +29,6 @@
   "devDependencies": {
     "concurrently": "^8.2.0"
   },
-  "homepage": "https://github.com/kitdhing/visionaryvault"
+  "homepage": "https://github.com/kitdhing/visionaryvault",
+  "proxy": "http://localhost:3001/"
 }

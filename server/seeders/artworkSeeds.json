@@ -15,7 +15,9 @@
     "medium": "oil",
     "images": ["https://example.com/artwork/mona_lisa.jpg"],
     "price": 2000,
-    "isCommissioned": true
+    "isCommissioned": true,
+    "artist": "64cd741163abd60287644b91",
+    "customer": "64cd765648c1093647ec1565"
   },
   {
     "title": "Abstract Composition",
