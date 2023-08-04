@@ -9,9 +9,11 @@ const About = () => {
       <div className="row justify-content-center">
         <div className="col-md-5">
           <h1>
+            {/* What do we wnat the title for this to be? */}
             Title
           </h1>
           <p>
+            {/* What do we want to say? */}
             Welcome to our site! 
             We hope that you find it enjoyable and easy to navigate. 
             We are a team of four who have set out to create a page where artists can show off their work!
@@ -19,12 +21,13 @@ const About = () => {
         </div>
       </div>
 
-      <div className="row justify-content-center carousel-row">
+      <div className="row justify-content-center carouselRow">
         <div className="col-md-8">
           <Carousel>
             <Carousel.Item>
               <img
                 className="d-block w-100"
+                // need to change these to group photos add links to pages
                 src={firstSlideImage}
                 alt="First slide"
               />
@@ -36,6 +39,7 @@ const About = () => {
             <Carousel.Item>
               <img
                 className="d-block w-100"
+                // need to change these to group photos add links to pages
                 src={firstSlideImage}
                 alt="Second slide"
               />
@@ -47,6 +51,7 @@ const About = () => {
             <Carousel.Item>
               <img
                 className="d-block w-100"
+                // need to change these to group photos add links to pages
                 src={firstSlideImage}
                 alt="Third slide"
               />
