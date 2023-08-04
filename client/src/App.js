@@ -3,7 +3,9 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
 import { ChakraProvider } from "@chakra-ui/react";
-import Navbar from '../src/components/Navbar/NavBar'
+
+import NavBar from "./components/NavBar/NavBar";
+
 import Home from "./views/Home/Home";
 // import ArtistPage from "./views/ArtistPage/ArtistPage";
 import Gallery from "./views/Gallery/Gallery";
@@ -39,7 +41,7 @@ function App() {
     <ApolloProvider client={client}>
       <ChakraProvider>
         <Router>
-          <Navbar />
+          <NavBar />
           <Switch>
             <Route exact path="/" component={Home} />
             {/* <Route path="/artistPage" component={ArtistPage} /> */}
