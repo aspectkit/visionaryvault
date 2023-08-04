@@ -1,0 +1,18 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 10%; /* Increase the top margin to move the content further down */
+  }
+  
+  /* Add top margin for the carousel row to provide separation */
+  .carousel-row {
+    margin-top: 20px;
+  }
+  
+  /* Change the color of the carousel text */
+  .carouselText {
+    color: red;
+  }

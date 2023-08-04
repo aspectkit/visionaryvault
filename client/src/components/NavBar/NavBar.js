@@ -23,7 +23,7 @@ return (
               </button>
           </div>
           <div className='links'>
-          <div className='title'>Visionary Vault</div>
+          <Link className='title' to='/'>Visionary Vault</Link>
             {/* <Search /> */}
             <Link className='pop' to="/"> Home </Link>
             <Link className='pop' to="/artist"> Artist </Link>
