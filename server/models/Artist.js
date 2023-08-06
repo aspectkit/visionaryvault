@@ -45,7 +45,12 @@ const artistSchema = new Schema({
     country: { type: String, required: true },
     address: { type: String, required: true },
   },
-  artwork: [{ type: Schema.Types.ObjectId, ref: "Artwork" }],
+  artworks: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Artwork",
+    },
+  ],
   commissionPriceRange: {
     minPrice: { type: Number, required: true },
     maxPrice: { type: Number, required: true },

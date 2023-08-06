@@ -17,7 +17,7 @@
       "country": "United Kingdom",
       "address": "London, UK"
     },
-    "artwork": [],
+  
     "commissionPriceRange": {
       "minPrice": 500,
       "maxPrice": 5000
@@ -42,7 +42,6 @@
       "country": "Fiji",
       "address": "123 Comefindme Way"
     },
-    "artwork": [],
     "commissionPriceRange": {
       "minPrice": 1,
       "maxPrice": 5

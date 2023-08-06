@@ -6,7 +6,7 @@
     "medium": "oil",
     "images": ["https://example.com/artwork/starry_night.jpg"],
     "price": 1500,
-    "isCommissioned": false
+    "isCommissioned": true
   },
   {
     "title": "Mona Lisa",
@@ -15,9 +15,7 @@
     "medium": "oil",
     "images": ["https://example.com/artwork/mona_lisa.jpg"],
     "price": 2000,
-    "isCommissioned": true,
-    "artist": "64cd741163abd60287644b91",
-    "customer": "64cd765648c1093647ec1565"
+    "isCommissioned": true
   },
   {
     "title": "Abstract Composition",
@@ -25,7 +23,61 @@
     "type": "digital",
     "medium": "digital painting",
     "images": ["https://example.com/artwork/abstract_composition.jpg"],
-    "price": null,
-    "isCommissioned": false
+    "price": 50,
+    "isCommissioned": true
+  },
+  {
+    "title": "The Last Supper",
+    "year": 1495,
+    "type": "traditional",
+    "medium": "acrylic",
+    "images": [""],
+    "price": 1800,
+    "isCommissioned": true
+  },
+  {
+    "title": "Girl with a Pearl Earring",
+    "year": 1665,
+    "type": "traditional",
+    "medium": "oil",
+    "images": [""],
+    "price": 2100,
+    "isCommissioned": true
+  },
+  {
+    "title": "Guernica",
+    "year": 1937,
+    "type": "traditional",
+    "medium": "oil",
+    "images": [""],
+    "price": 2500,
+    "isCommissioned": true
+  },
+  {
+    "title": "The Scream",
+    "year": 1893,
+    "type": "traditional",
+    "medium": "acrylic",
+    "images": [""],
+    "price": 1700,
+    "isCommissioned": true
+  },
+  {
+    "title": "Water Lilies",
+    "year": 1916,
+    "type": "traditional",
+    "medium": "oil",
+    "images": [""],
+    "price": 2200,
+    "isCommissioned": true
+  },
+  {
+    "title": "The Birth of Venus",
+    "year": 1486,
+    "type": "traditional",
+    "medium": "acrylic",
+    "images": [""],
+    "price": 1900,
+    "isCommissioned": true
   }
 ]

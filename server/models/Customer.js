@@ -12,7 +12,12 @@ const customerSchema = new Schema({
     address: { type: String, required: true },
   },
   favoriteArtists: [{ type: Schema.Types.ObjectId, ref: "Artist" }], // Many-to-many relationship with artists
-  commissionedArtworks: [{ type: Schema.Types.ObjectId, ref: "Artwork" }], // Artworks commissioned by the customer
+  artworks: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Artwork",
+    },
+  ], // Artworks commissioned by the customer
 });
 
 const Customer = model("Customer", customerSchema);

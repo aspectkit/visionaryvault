@@ -12,6 +12,141 @@
       "address": "123 Main Street"
     },
     "favoriteArtists": [],
-    "hasCommissionedArt": false
+    "hasCommissionedArt": true
+  },
+  {
+    "firstName": "Jennifer",
+    "lastName": "Swift",
+    "nickname": "Jenny",
+    "username": "jswifty23",
+    "password": "J3nnysw!ftPass",
+    "contactInformation": {
+      "email": "jennyswift@email.com",
+      "phoneNumber": "(555) 123-4567",
+      "country": "United States",
+      "address": "123 Swift Avenue"
+    },
+    "favoriteArtists": [],
+    "hasCommissionedArt": true
+  },
+  {
+    "firstName": "Robert",
+    "lastName": "Blaze",
+    "nickname": "Robbie",
+    "username": "blazeartist78",
+    "password": "RB78bl@zeArt",
+    "contactInformation": {
+      "email": "robertblaze@email.com",
+      "phoneNumber": "(555) 987-6543",
+      "country": "United States",
+      "address": "456 Fire Lane"
+    },
+    "favoriteArtists": [],
+    "hasCommissionedArt": true
+  },
+  {
+    "firstName": "Emma",
+    "lastName": "Stardust",
+    "nickname": "Emmy",
+    "username": "starryemma12",
+    "password": "Em12st@rdust",
+    "contactInformation": {
+      "email": "emmastardust@email.com",
+      "phoneNumber": "(555) 456-7890",
+      "country": "United States",
+      "address": "789 Sparkle Road"
+    },
+    "favoriteArtists": [],
+    "hasCommissionedArt": true
+  },
+  {
+    "firstName": "Michael",
+    "lastName": "Thunder",
+    "nickname": "Mikey",
+    "username": "thund3rmike",
+    "password": "M1k3ythund3r",
+    "contactInformation": {
+      "email": "michaelthunder@email.com",
+      "phoneNumber": "(555) 789-0123",
+      "country": "United States",
+      "address": "101 Lightning Street"
+    },
+    "favoriteArtists": [],
+    "hasCommissionedArt": true
+  },
+  {
+    "firstName": "Sophia",
+    "lastName": "Moonbeam",
+    "nickname": "Sophie",
+    "username": "moonysophia",
+    "password": "M00nySoph!",
+    "contactInformation": {
+      "email": "sophiamoonbeam@email.com",
+      "phoneNumber": "(555) 321-0987",
+      "country": "United States",
+      "address": "222 Starry Lane"
+    },
+    "favoriteArtists": [],
+    "hasCommissionedArt": true
+  },
+  {
+    "firstName": "Daniel",
+    "lastName": "Silverstar",
+    "nickname": "Danny",
+    "username": "silverdanny87",
+    "password": "D@nny87Silver",
+    "contactInformation": {
+      "email": "danielsilverstar@email.com",
+      "phoneNumber": "(555) 876-5432",
+      "country": "United States",
+      "address": "333 Celestial Avenue"
+    },
+    "favoriteArtists": [],
+    "hasCommissionedArt": true
+  },
+  {
+    "firstName": "Olivia",
+    "lastName": "Skyline",
+    "nickname": "Ollie",
+    "username": "skyollie9",
+    "password": "Sky9l!eOllie",
+    "contactInformation": {
+      "email": "oliviaskyline@email.com",
+      "phoneNumber": "(555) 234-5678",
+      "country": "United States",
+      "address": "444 Horizon Drive"
+    },
+    "favoriteArtists": [],
+    "hasCommissionedArt": true
+  },
+  {
+    "firstName": "William",
+    "lastName": "Brushstroke",
+    "nickname": "Will",
+    "username": "wbrushy22",
+    "password": "W1llBrus!22",
+    "contactInformation": {
+      "email": "williambrushstroke@email.com",
+      "phoneNumber": "(555) 765-4321",
+      "country": "United States",
+      "address": "555 Artistic Boulevard"
+    },
+    "favoriteArtists": [],
+    "hasCommissionedArt": true
+  },
+  {
+    "firstName": "Isabella",
+    "lastName": "Rainbow",
+    "nickname": "Izzy",
+    "username": "rainbowizzy4",
+    "password": "Izzyr@inbow4",
+    "contactInformation": {
+      "email": "isabellarainbow@email.com",
+      "phoneNumber": "(555) 987-6543",
+      "country": "United States",
+      "address": "666 Colorful Lane"
+    },
+    "favoriteArtists": [],
+    "hasCommissionedArt": true
   }
 ]
