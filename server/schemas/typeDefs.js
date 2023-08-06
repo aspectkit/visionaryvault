@@ -8,7 +8,7 @@ const typeDefs = gql`
     artistPicture: String
     artistDescription: ArtistDescription
     contactInformation: ContactInformation
-    artwork: [Artwork]
+    artworks: [Artwork]
     commissionPriceRange: PriceRange
     username: String
     password: String
@@ -53,7 +53,8 @@ const typeDefs = gql`
     firstName: String!
     lastName: String!
     contactInformation: ContactInformation
-    commissionedArtworks: [Artwork]
+    artworks: [Artwork]
+    favoriteArtists: [Artist]
   }
 
   type Query {
