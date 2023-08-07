@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Support.css';
+import '../../components/Wrapper/Wrapper.css'
 
 const Support = () => {
   const [name, setName] = useState('');
@@ -12,8 +13,11 @@ const Support = () => {
   };
 
   return (
-    <div>
-      <h2>Support</h2>
+    <div className='wrapper'>
+      <h2>Need Tech Help?</h2>
+      <p>
+        For any tech related questions please fill out the form provided below.
+      </p>
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="name">Name:</label>

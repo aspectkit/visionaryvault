@@ -7,7 +7,8 @@ import { ChakraProvider } from "@chakra-ui/react";
 import NavBar from "./components/NavBar/NavBar";
 
 import Home from "./views/Home/Home";
-// import ArtistPage from "./views/ArtistPage/ArtistPage";
+import ArtistPage from "./views/Artist/ArtistPage/ArtistPage";
+import ArtistPortfolio from './views/Artist/ArtistPortfolio/ArtistPortfolio';
 import Gallery from "./views/Gallery/Gallery";
 import About from "./views/About/About";
 import Support from "./views/Support/Support";
@@ -44,10 +45,11 @@ function App() {
           <NavBar />
           <Switch>
             <Route exact path="/" component={Home} />
-            {/* <Route path="/artistPage" component={ArtistPage} /> */}
+            <Route path="/artistPage" component={ArtistPage} />
             <Route path="/gallery" component={Gallery} />
             <Route path="/about" component={About} />
             <Route path="/support" component={Support} />
+            <Route path="/viewProfile" component={ArtistPortfolio } />
           </Switch>
         </Router>
       </ChakraProvider>
