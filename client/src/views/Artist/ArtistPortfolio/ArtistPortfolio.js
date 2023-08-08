@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom';
+import BrushIcon from '@mui/icons-material/Brush';
 import "./ArtistPortfolio.css";
 
 const loggedInUser = {
@@ -66,7 +67,8 @@ function ArtistPortfolio() {
       <p className="bio">{loggedInUser.bio}</p>
       <div className="commissionButtonContainer">
         <Link to="/commission" className="commissionButton">
-          Commission Artwork
+          <span className='icon'><BrushIcon/></span>
+          <span className='title'>Purchase Artwork</span>
         </Link>
       </div>
       <hr className="page-break" />

@@ -164,7 +164,6 @@ transition: 2s;
   background-image: linear-gradient(45deg, #954495, #094d90, #993e3e);
 }
 .navbar {
-  list-style: none;
   display: flex;
   align-items: center;
   left: 1%;
@@ -270,4 +269,57 @@ transition: 2s;
 .visionaryLink:hover {
   color: white;
   text-decoration: none;
+}
+
+
+@media (max-width: 768px) {
+  .navbarContainer {
+    height: 15%;
+  }
+
+  .navbar {
+    left: 0;
+  }
+
+  .navbar li {
+    margin-right: 15px;
+  }
+
+  .navbar li .icon {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+  }
+
+  .navbar li .title {
+    font-size: 0.9em;
+  }
+
+  .visionary {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbarContainer {
+    height: 5%;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navbar li {
+    margin-right: 1px;
+  }
+
+  .navbar li .icon {
+    font-size: 1rem;
+    margin-bottom: 1px;
+  }
+
+  .navbar li .title {
+    font-size: 0.5em;
+  }
 }
