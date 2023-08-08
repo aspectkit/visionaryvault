@@ -45,7 +45,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom';
 import "./NavBar.css";
-// import ReorderTwoToneIcon from '@mui/icons-material/ReorderTwoTone';
 import CollectionsIcon from '@mui/icons-material/Collections';
 import HomeIcon from '@mui/icons-material/Home';
 import EmojiPeopleIcon from '@mui/icons-material/EmojiPeople';
@@ -63,15 +62,6 @@ function Navbar() {
 
   return (
       <div className='navbarContainer'>
-        {/* <div className='navbar' id={expandNavbar ? 'open' : 'collapsed'}>
-        {location.pathname !== '/' && (
-          <div className='logoOverlay'> <b className='pulse circle'>T</b>race<b>M</b>artin </div>
-        )}
-            <div className='toggleButton'>
-                <button onClick={() => {setExpandNavBar((prev) => !prev)}}> 
-                    <ReorderTwoToneIcon />
-                </button>
-            </div> */}
             <Link className='visionary visionaryLink' to='/'><b>Visionary Vault</b></Link>
             <ul className='navbar'>
                 <li style={{'--i': '#023466', '--j': 'white'}}>
@@ -80,7 +70,6 @@ function Navbar() {
                         <span className='title'>Featured</span>
                     </Link>
                 </li>
-                {/* this is the background color #954495 */}
                 <li style={{'--i': 'white', '--j': '#954495'}}>
                     <Link to='/gallery'>
                         <span className='icon'><CollectionsIcon /></span>
@@ -107,7 +96,6 @@ function Navbar() {
                 </li>
             </ul>
         </div>
-    // </div>
   );
 }
 
