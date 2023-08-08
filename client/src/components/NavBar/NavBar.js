@@ -2,7 +2,6 @@ import './NavBar.css';
 import React, { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom';
 import ReorderTwoToneIcon from '@mui/icons-material/ReorderTwoTone';
-// import Search from './SearchBar';
 import '../Wrapper/Wrapper.css';
 
 function Navbar() {
@@ -24,8 +23,6 @@ return (
           </div>
           <div className='links'>
           <Link className='title' to='/'>Visionary Vault</Link>
-            {/* <Search /> */}
-            <Link className='pop' to="/"> Home </Link>
             <Link className='pop' to="/featuredArtist"> Featured </Link>
             <Link className='pop' to="/gallery"> Gallery </Link>
             <Link className='pop' to="/about"> About Us </Link>
