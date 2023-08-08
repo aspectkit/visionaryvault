@@ -38,8 +38,7 @@ return (
             <Link className='pop' to="/about"> <EmojiPeopleIcon /> About Us </Link>
             <Link className='pop' to="/support"> <ContactSupportIcon /> Support </Link>
             <Link className='pop' to="/viewProfile"> <AccountBoxIcon /> View Profile </Link>
-          </div>
-          <div>
+            <div d-flex flex-row-reverse>
           {Auth.loggedIn() ? (
             <button className="btn btn-lg btn-light m-2" onClick={logout}>
               Logout
@@ -49,12 +48,14 @@ return (
               <Link className="btn btn-lg btn-primary m-2" to="/login">
                 Login
               </Link>
-              <Link className="btn btn-lg btn-light m-2" to="/signup">
+              <Link className="btn btn-lg btn-primary m-2" to="/signup">
                 Signup
               </Link>
             </>
           )}
         </div>
+          </div>
+          
       </div>
   </div>
 );

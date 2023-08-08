@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
-import {ADD_ARTIST} from '../utils/mutations'
-import Auth from '../utils/auth'
+import {ADD_ARTIST} from '../../utils/mutations'
+import Auth from '../../utils/auth'
 
 
 const Signup = () => {
@@ -52,7 +52,7 @@ const Signup = () => {
                   <form onSubmit={handleFormSubmit}>
                     <input
                       className="form-input"
-                      placeholder="Your username"
+                      placeholder="Your new username"
                       name="name"
                       type="text"
                       value={formState.name}
