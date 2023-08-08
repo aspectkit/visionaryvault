@@ -13,6 +13,6 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://mlgibson8:abcdefg@clu
 //   useUnifiedTopology: true,
 // });
 
-module.exports = connection; 
+// module.exports = connection; 
 
 module.exports = mongoose.connection;
