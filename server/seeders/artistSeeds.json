@@ -3,9 +3,10 @@
     "artistName": {
       "firstName": "Tyler",
       "lastName": "Smith",
-      "nickname": "Banksy"
+      "nickname": "Tyler the Artist"
     },
-    "artistPicture": "https://drive.google.com/file/d/1e_A_in8D2zWEoN3ySPKnup2AxqMHIDEM/view?usp=sharing",
+    "artistPicture": "data:image/jpeg;base64,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",
+
 
     "artistDescription": {
       "styleOfArt": "other",
@@ -17,7 +18,7 @@
       "country": "United Kingdom",
       "address": "London, UK"
     },
-  
+ 
     "commissionPriceRange": {
       "minPrice": 500,
       "maxPrice": 5000
@@ -31,7 +32,7 @@
       "lastName": "Martin",
       "nickname": "Lobster Legs Jerry"
     },
-    "artistPicture": "https://drive.google.com/file/d/1gfeyDCRH7L5PVusAkHhJ3K0xoqzqEjxP/view?usp=sharing",
+    "artistPicture": "https://avatars.githubusercontent.com/u/123417800?v=4",
     "artistDescription": {
       "styleOfArt": "pencil",
       "artistProfile": "Combines teaching, coding, and fatherhood to make a spectacular messy art.."
@@ -48,5 +49,77 @@
     },
     "username": "bigT",
     "password": "1234"
+  },
+  {
+    "artistName": {
+      "firstName": "Pablo",
+      "lastName": "Gonzalez",
+      "nickname": "ArtistaPablo"
+    },
+    "artistPicture": "https://cdn.britannica.com/62/192062-131-96B933EF/mug-shot-Colombia-control-agency-Medellin.jpg",
+    "artistDescription": {
+      "styleOfArt": "oil",
+      "artistProfile": "A passionate oil painter who captures the beauty of nature and landscapes."
+    },
+    "contactInformation": {
+      "email": "pablo@example.com",
+      "phoneNumber": "555-987-6543",
+      "country": "Spain",
+      "address": "Barcelona, Spain"
+    },
+    "commissionPriceRange": {
+      "minPrice": 1000,
+      "maxPrice": 8000
+    },
+    "username": "artbyPablo",
+    "password": "pablo123"
+  },
+  {
+    "artistName": {
+      "firstName": "Sophia",
+      "lastName": "Nguyen",
+      "nickname": "SculptureSophia"
+    },
+    "artistPicture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRr7Llo6du8d0hmpif1-ECFy-57IVdAQn7mFw&usqp=CAU",
+    "artistDescription": {
+      "styleOfArt": "sculpture",
+      "artistProfile": "An innovative sculptor who transforms ordinary materials into extraordinary forms."
+    },
+    "contactInformation": {
+      "email": "sophia@example.com",
+      "phoneNumber": "123-456-7890",
+      "country": "USA",
+      "address": "New York, NY"
+    },
+    "commissionPriceRange": {
+      "minPrice": 800,
+      "maxPrice": 6000
+    },
+    "username": "sculptureSophia",
+    "password": "sophia456"
+  },
+  {
+    "artistName": {
+      "firstName": "Akira",
+      "lastName": "Tanaka",
+      "nickname": "InkMasterAkira"
+    },
+    "artistPicture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkMr379nYvt70IxSNdaT8k8q1NgZRd4TlGVw&usqp=CAU",
+    "artistDescription": {
+      "styleOfArt": "raster painting",
+      "artistProfile": "A master of intricate ink drawings that depict cultural stories and folklore."
+    },
+    "contactInformation": {
+      "email": "akira@example.com",
+      "phoneNumber": "987-654-3210",
+      "country": "Japan",
+      "address": "Tokyo, Japan"
+    },
+    "commissionPriceRange": {
+      "minPrice": 500,
+      "maxPrice": 4000
+    },
+    "username": "inkMasterAkira",
+    "password": "akira789"
   }
 ]

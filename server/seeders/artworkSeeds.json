@@ -4,7 +4,7 @@
     "year": 1889,
     "type": "traditional",
     "medium": "oil",
-    "images": ["https://example.com/artwork/starry_night.jpg"],
+    "images": ["https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/1200px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg"],
     "price": 1500,
     "isCommissioned": true
   },
@@ -13,7 +13,7 @@
     "year": 1503,
     "type": "traditional",
     "medium": "oil",
-    "images": ["https://example.com/artwork/mona_lisa.jpg"],
+    "images": ["https://psmag.com/.image/t_share/MTI3NTgyMzc3OTk1NDQyNjU0/monamysteryjpg.jpg"],
     "price": 2000,
     "isCommissioned": true
   },
@@ -22,7 +22,7 @@
     "year": 1920,
     "type": "digital",
     "medium": "digital painting",
-    "images": ["https://example.com/artwork/abstract_composition.jpg"],
+    "images": ["https://uploads0.wikiart.org/images/jean-arp/abstract-composition.jpg!Large.jpg"],
     "price": 50,
     "isCommissioned": true
   },
@@ -31,7 +31,7 @@
     "year": 1495,
     "type": "traditional",
     "medium": "acrylic",
-    "images": [""],
+    "images": ["data:image/jpeg;base64,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"],
     "price": 1800,
     "isCommissioned": true
   },
@@ -40,7 +40,7 @@
     "year": 1665,
     "type": "traditional",
     "medium": "oil",
-    "images": [""],
+    "images": ["https://cdn.britannica.com/33/194733-050-4CF75F31/Girl-with-a-Pearl-Earring-canvas-Johannes-1665.jpg?w=300&h=169&c=crop"],
     "price": 2100,
     "isCommissioned": true
   },
@@ -49,7 +49,7 @@
     "year": 1937,
     "type": "traditional",
     "medium": "oil",
-    "images": [""],
+    "images": ["https://upload.wikimedia.org/wikipedia/en/thumb/7/74/PicassoGuernica.jpg/400px-PicassoGuernica.jpg"],
     "price": 2500,
     "isCommissioned": true
   },
@@ -58,7 +58,7 @@
     "year": 1893,
     "type": "traditional",
     "medium": "acrylic",
-    "images": [""],
+    "images": ["https://cdn.britannica.com/93/240793-138-69567C00/Edvard-Munch-The-Scream.jpg?w=800&h=450&c=crop"],
     "price": 1700,
     "isCommissioned": true
   },
@@ -67,7 +67,7 @@
     "year": 1916,
     "type": "traditional",
     "medium": "oil",
-    "images": [""],
+    "images": ["https://cdn.britannica.com/89/174689-050-794BDBA4/Plant-Flower-Aquatic-plant-Water-lily-Nymphaea.jpg"],
     "price": 2200,
     "isCommissioned": true
   },
@@ -76,8 +76,52 @@
     "year": 1486,
     "type": "traditional",
     "medium": "acrylic",
-    "images": [""],
+    "images": ["https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Sandro_Botticelli_-_La_nascita_di_Venere_-_Google_Art_Project_-_edited.jpg/800px-Sandro_Botticelli_-_La_nascita_di_Venere_-_Google_Art_Project_-_edited.jpg"],
     "price": 1900,
     "isCommissioned": true
-  }
+  },
+  {
+    "title": "Persistence of Memory",
+    "year": 1931,
+    "type": "traditional",
+    "medium": "oil",
+    "images": ["https://uploads6.wikiart.org/images/salvador-dali/the-persistence-of-memory-1931.jpg!Large.jpg"],
+    "price": 1800,
+    "isCommissioned": true
+},
+{
+  "title": "The Birth of Adam",
+  "year": 1512,
+  "type": "digital",
+  "medium": "algorithmic art",
+  "images": ["https://cdn.thecollector.com/wp-content/uploads/2022/03/michelangelo-creation-adam-detail-featured.jpg?width=1400&quality=70"],
+  "price": 2800,
+  "isCommissioned": true
+},
+{
+  "title": "Drowning in Data",
+  "year": 2020,
+  "type": "digital",
+  "medium": "datamoshing",
+  "images": ["https://www.kdnuggets.com/wp-content/uploads/drowning-data.jpg"],
+  "price": 1200,
+  "isCommissioned": true
+},
+{
+  "title": "Abstract Harmony",
+  "year": 2018,
+  "type": "digital",
+  "medium": "dynamic painting",
+  "images": ["https://artist.com/photos/arts/big/abstract-dreams-185029521.jpg"],
+  "price": 1700,
+  "isCommissioned": true
+}
+
+
+
+
+
+
+
+
 ]

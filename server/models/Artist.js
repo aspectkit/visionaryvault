@@ -62,7 +62,7 @@ const artistSchema = new Schema({
 },
 
 {
-  toJSon: {
+  toJSON: {
     virtuals: true,
   },
 }
