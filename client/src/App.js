@@ -50,7 +50,7 @@ function App() {
             <Route path="/about" component={About} />
             <Route path="/support" component={Support} />
             <Route path="/viewProfile" component={ArtistPortfolio } />
-          <Routes>
+          </Routes>
         </Router>
       </ChakraProvider>
     </ApolloProvider>
