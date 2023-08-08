@@ -23,14 +23,14 @@ const Signup = () => {
 
     const handleFormSubmit = async (event) => {
         event.preventDefault();
+        console.log("here!");
         console.log(formState);
 
         try {
             const { data } = await addArtist({
                 variables: {...formState },
             });
-            console.log(data);
-            console.log("whats")
+            
             Auth.login(data.addArtist.token);
             
         } catch (err){

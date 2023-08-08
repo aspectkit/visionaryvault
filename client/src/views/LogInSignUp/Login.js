@@ -9,11 +9,12 @@ const Login = (props) => {
     const [login, {error, data}] = useMutation(LOGIN_USER);
 
     const handleChange = (event) => {
-        const {username, value} = event.target;
+        const {name, value} = event.target;
+        console.log(name, value);
 
         setFormState({
             ...formState,
-            [username]: value,
+            [name]: value,
         });
     };
 
@@ -29,6 +30,7 @@ const Login = (props) => {
             Auth.login(data.login.token);
         } catch (err){
             console.error(err);
+            
         }
 
         setFormState({

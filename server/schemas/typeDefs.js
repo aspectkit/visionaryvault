@@ -26,23 +26,23 @@ const typeDefs = gql`
   }
 
   type ArtistDescription {
-    styleOfArt: [String!]!
+    styleOfArt: [String]
     artistProfile: String
   }
 
   type ContactInformation {
-    email: String!
-    phoneNumber: String!
-    country: String!
-    address: String!
+    email: String
+    phoneNumber: String
+    country: String
+    address: String
   }
 
   type Artwork {
     _id: ID
-    title: String!
+    title: String
     description: String
-    medium: String!
-    images: [String!]!
+    medium: String
+    images: [String]
 
     yearCreated: Int
     isCommissioned: Boolean
@@ -51,14 +51,14 @@ const typeDefs = gql`
   }
 
   type PriceRange {
-    minPrice: Float!
-    maxPrice: Float!
+    minPrice: Float
+    maxPrice: Float
   }
 
   type Customer {
     _id: ID
-    firstName: String!
-    lastName: String!
+    firstName: String
+    lastName: String
     contactInformation: ContactInformation
     artworks: [Artwork]
     favoriteArtists: [Artist]
