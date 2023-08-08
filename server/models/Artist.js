@@ -1,4 +1,6 @@
 const { Schema, model } = require("mongoose");
+const bcrypt = require("bcrypt");
+
 
 const artistSchema = new Schema({
   artistName: {
@@ -57,7 +59,27 @@ const artistSchema = new Schema({
   },
   username: { type: String, required: true },
   password: { type: String, required: true },
+},
+
+{
+  toJSon: {
+    virtuals: true,
+  },
+}
+);
+
+artistSchema.pre('save', async function (next) {
+  if (this.isNew || this.isModified('password')) {
+    const saltRounds = 10;
+    this.password = await bcrypt.hash(this.password, saltRounds)
+  }
+  next();
 });
+
+artistSchema.methods.isCorrectPassword = async function (password) {
+  return bcrypt.compare(password, this.password);
+}; 
+
 
 const Artist = model("Artist", artistSchema);
 
