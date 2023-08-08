@@ -13,11 +13,11 @@ const Signup = () => {
     const [addArtist, {error, data}] = useMutation(ADD_ARTIST);
 
     const handleChange = (event) => {
-        const {username, value} = event.target;
-
+        const {name, value} = event.target;
+        console.log(name, value);
         setFormState({
             ...formState,
-            [username]: value,
+            [name]: value,
         });
     };
 
@@ -29,10 +29,13 @@ const Signup = () => {
             const { data } = await addArtist({
                 variables: {...formState },
             });
-
+            console.log(data);
+            console.log("whats")
             Auth.login(data.addArtist.token);
+            
         } catch (err){
             console.error(err);
+            
         }
     };
 
@@ -53,14 +56,14 @@ const Signup = () => {
                     <input
                       className="form-input"
                       placeholder="Your new username"
-                      name="name"
+                      name="username"
                       type="text"
-                      value={formState.name}
+                      value={formState.username}
                       onChange={handleChange}
                     />
                     <input
                       className="form-input"
-                      placeholder="******"
+                      placeholder="enter password"
                       name="password"
                       type="password"
                       value={formState.password}
