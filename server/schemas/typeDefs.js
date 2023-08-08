@@ -42,6 +42,8 @@ const typeDefs = gql`
     title: String!
     description: String
     medium: String!
+    images: [String!]!
+
     yearCreated: Int
     isCommissioned: Boolean
     artist: Artist
