@@ -1,20 +1,17 @@
 import React, {useState} from 'react';
-import { Link } from 'react-router-dom';
-import { useMutation } from '@apollo/client';
-import {ADD_ARTIST} from '../../utils/mutations'
+import {Link} from 'react-router-dom'
+import {useMutation} from '@apollo/client'
+import {LOGIN_USER} from '../../utils/mutations'
 import Auth from '../../utils/auth'
 
-
-const Signup = () => {
-    const [formState, setFormState] = useState({
-        username: '',
-        password: '',
-    });
-    const [addArtist, {error, data}] = useMutation(ADD_ARTIST);
+const Login = (props) => {
+    const [formState, setFormState] = useState({username: '', password: ''});
+    const [login, {error, data}] = useMutation(LOGIN_USER);
 
     const handleChange = (event) => {
         const {name, value} = event.target;
         console.log(name, value);
+
         setFormState({
             ...formState,
             [name]: value,
@@ -23,28 +20,30 @@ const Signup = () => {
 
     const handleFormSubmit = async (event) => {
         event.preventDefault();
-        console.log("here!");
         console.log(formState);
 
         try {
-            const { data } = await addArtist({
-                variables: { ...formState },
+            const { data } = await login({
+                variables: {...formState},
             });
-            
-            Auth.login(data.addArtist.token);
-            
+
+            Auth.login(data.login.token);
         } catch (err){
             console.error(err);
             
         }
-    };
 
+        setFormState({
+            username: '',
+            password: '',
+        });
+    };
 
     return (
         <main className="flex-row justify-center mb-4">
           <div className="col-12 col-lg-10">
             <div className="card">
-              <h4 className="card-header bg-dark text-light p-2">Sign Up</h4>
+              <h4 className="card-header bg-dark text-light p-2">Login</h4>
               <div className="card-body">
                 {data ? (
                   <p>
@@ -55,7 +54,7 @@ const Signup = () => {
                   <form onSubmit={handleFormSubmit}>
                     <input
                       className="form-input"
-                      placeholder="Your new username"
+                      placeholder="Your username"
                       name="username"
                       type="text"
                       value={formState.username}
@@ -63,7 +62,7 @@ const Signup = () => {
                     />
                     <input
                       className="form-input"
-                      placeholder="enter password"
+                      placeholder="******"
                       name="password"
                       type="password"
                       value={formState.password}
@@ -89,6 +88,6 @@ const Signup = () => {
           </div>
         </main>
       );
-}
+};
 
-export default Signup;
+export default Login;

@@ -1,4 +1,6 @@
 const { Artist, Artwork, Customer } = require("../models");
+const {AuthenticationError} = require('apollo-server-express');
+const {signToken} = require('../utils/auth');
 
 const resolvers = {
   Query: {
@@ -12,6 +14,32 @@ const resolvers = {
     customers: async () => {
       return await Customer.find({}).populate("artworks favoriteArtists"); // Populate favoriteArtists
     },
+  },
+  Mutation: {
+    addArtist: async (parent, {username, password}) => {
+      console.log("here");
+      const artist = await Artist.create({username, password});
+      
+      const token = signToken(artist);
+
+      return {token, artist};
+    },
+    login: async (parent, {username, password}) => {
+      const artist = await Artist.findOne({username});
+
+      if (!artist){
+        throw new AuthenticationError('No artist with this email found!');
+      }
+
+      const correctPw = await artist.isCorrectPassword(password);
+
+      if (!correctPw){
+        throw new AuthenticationError("incorrect password!");
+      }
+
+      const token = signToken(artist);
+      return {token, artist}
+    }
   },
   Artist: {
     artworks: async (parent) => {

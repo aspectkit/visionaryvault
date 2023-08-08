@@ -50,9 +50,15 @@ import HomeIcon from '@mui/icons-material/Home';
 import EmojiPeopleIcon from '@mui/icons-material/EmojiPeople';
 import ContactSupportIcon from '@mui/icons-material/ContactSupport';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
-
+import '../Wrapper/Wrapper.css';
+import Auth from '../../utils/auth'
 function Navbar() {
-    const [expandNavbar, setExpandNavBar] = useState(false);
+
+  const logout = (event) => {
+    event.preventDefault();
+    Auth.logout();
+  }
+  const [expandNavbar, setExpandNavBar] = useState(false);
 
     const location = useLocation();
 
@@ -95,6 +101,22 @@ function Navbar() {
                     </Link>
                 </li>
             </ul>
+            <div style={{ display: 'flex', flexDirection: 'row-reverse' }}>
+          {Auth.loggedIn() ? (
+            <button className="btn btn-lg btn-light m-2" onClick={logout}>
+              Logout
+            </button>
+          ) : (
+            <>
+              <Link className="btn btn-lg btn-primary m-2" to="/login">
+                Login
+              </Link>
+              <Link className="btn btn-lg btn-primary m-2" to="/signup">
+                Signup
+              </Link>
+            </>
+          )}
+        </div> 
         </div>
   );
 }
