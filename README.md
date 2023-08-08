@@ -1,7 +1,7 @@
 # Visonary Vault
 ![Github License:MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 ## Description
-  This application lets customers and artist meetup, allowing the sale of current peices as well as comissions \
+  This application lets customers and artist to meetup allowing the sale of current peices as well as comissions \
 ## Screenshots
 ![Screenshot](https://github.com/kitdhing/visionaryvault/tree/main/client/src/views/assets/visonary.jpg)
 ## Table of Contents
