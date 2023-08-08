@@ -71,10 +71,6 @@
       margin-top: 3%;
     }
     
-    .artPieceContainer {
-      /* Adjust styles for smaller screens */
-    }
-    
     .artPieceTitle {
       font-size: 18px;
     }
@@ -93,10 +89,6 @@
       grid-template-columns: repeat(1, 1fr);
       gap: 5px;
       margin-top: 2%;
-    }
-    
-    .artPieceContainer {
-      /* Further adjust styles for smallest screens */
     }
     
     .artPieceTitle {
