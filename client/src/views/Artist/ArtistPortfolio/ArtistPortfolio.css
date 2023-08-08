@@ -1,0 +1,43 @@
+.artist-container {
+    text-align: center;
+    padding: 20px;
+    padding-top: 5%;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.bio {
+    margin-bottom: 20px;
+}
+
+.page-break {
+    margin: 40px 0;
+    border: 0;
+    border-top: 1px dashed #ccc;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.image-item {
+    text-align: center;
+}
+
+.image-item img {
+    width: 100%;
+    height: auto;
+}
