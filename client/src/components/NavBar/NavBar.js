@@ -127,7 +127,7 @@ function Navbar() {
               </Link>
             </>
           )}
-        </div>
+        </div> 
         </div>
     // </div>
   );

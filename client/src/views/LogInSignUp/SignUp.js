@@ -28,7 +28,7 @@ const Signup = () => {
 
         try {
             const { data } = await addArtist({
-                variables: {...formState },
+                variables: { ...formState },
             });
             
             Auth.login(data.addArtist.token);
