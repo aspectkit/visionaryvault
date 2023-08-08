@@ -1,7 +1,7 @@
 const {Schema , model} = require("mongoose");
 
 const artworkSchema = new Schema({
-  title: { type: String, required: true },
+   title: { type: String, required: true },
   year: { type: Number, required: true },
   type: {
     type: String,
