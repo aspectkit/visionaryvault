@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import './CommissionForm.css';
 import '../Wrapper/Wrapper.css'
-
+import Auth from '../../utils/auth'
 const CommissionForm = () => {
   const [name, setName] = useState("");
   const [money, setMoney] = useState("");
@@ -11,12 +11,21 @@ const CommissionForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form submitted:", name, money, want, email);
+    let e1 = document.getElementById("name");
+    e1.value = '';
+    let e2 = document.getElementById("money");
+    e2.value = '';
+    let e3 = document.getElementById("want");
+    e3.value = '';
+    let e4 = document.getElementById("email");
+    e4.value = '';
   };
 
   return (
     <div className="wrapper">
     <div className="formContainer">
-      <form onSubmit={handleSubmit}>
+      {Auth.loggedIn() ? (
+        <form  onSubmit={handleSubmit}>
         <div>
           <label htmlFor="name">Name:</label>
           <input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} required />
@@ -37,6 +46,10 @@ const CommissionForm = () => {
           <button type="submit">Submit</button>
         </div>
       </form>
+      ) : (
+        <h1>You need to be logged in to commission someone!</h1>
+      )} 
+      
     </div>
     </div>
   );
