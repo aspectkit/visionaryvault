@@ -1,108 +1,36 @@
-import React, { useState, useEffect } from 'react';
-import './Gallery.css';
-import Picture1 from '../assets/hero.jpg'
-
-const seedData = [
-  {
-    id: 1,
-    imageURL: "https://via.placeholder.com/300",
-    artistName: "John Doe",
-    title: "Abstract Art",
-    description: "This is an abstract art piece with vibrant colors.",
-  },
-  {
-    id: 2,
-    imageURL: "https://via.placeholder.com/300",
-    artistName: "Jane Smith",
-    title: "Nature's Beauty",
-    description: "A serene landscape capturing the beauty of nature.",
-  },
-  {
-    id: 3,
-    imageURL: "https://via.placeholder.com/300",
-    artistName: "Michael Johnson",
-    title: "Portraits",
-    description: "Collection of expressive portrait paintings.",
-  },
-  {
-    id: 4,
-    imageURL: "https://via.placeholder.com/300",
-    artistName: "Michael Johnson",
-    title: "Portraits",
-    description: "Collection of expressive portrait paintings.",
-  },
-  {
-    id: 5,
-    imageURL: "https://via.placeholder.com/300",
-    artistName: "Michael Johnson",
-    title: "Portraits",
-    description: "Collection of expressive portrait paintings.",
-  },
-  {
-    id: 6,
-    imageURL: "https://via.placeholder.com/300",
-    artistName: "Michael Johnson",
-    title: "Portraits",
-    description: "Collection of expressive portrait paintings.",
-  },
-  {
-    id: 7,
-    imageURL: "https://via.placeholder.com/300",
-    artistName: "Michael Johnson",
-    title: "Portraits",
-    description: "Collection of expressive portrait paintings.",
-  },
-  {
-    id: 8,
-    imageURL: "https://via.placeholder.com/300",
-    artistName: "Michael Johnson",
-    title: "Portraits",
-    description: "Collection of expressive portrait paintings.",
-  },
-  {
-    id: 9,
-    imageURL: "https://via.placeholder.com/300",
-    artistName: "Michael Johnson",
-    title: "Portraits",
-    description: "Collection of expressive portrait paintings.",
-  },
-  {
-    id: 10,
-    imageURL: "https://via.placeholder.com/300",
-    artistName: "Michael Johnson",
-    title: "Portraits",
-    description: "Collection of expressive portrait paintings.",
-  },
-];
+import React, { useState, useEffect } from "react";
+import "./Gallery.css";
+import { useQuery } from "@apollo/client";
+import { QUERY_ARTISTS } from "../../utils/queries";
 
 function Gallery() {
-  // const [artPieces, setArtPieces] = useState([]);
-  const [artPieces, setArtPieces] = useState(seedData);
+  const { loading, error, data } = useQuery(QUERY_ARTISTS);
 
-  // useEffect(() => {
-  //   fetchRandomArt();
-  // }, []);
+  const [artPieces, setArtPieces] = useState([]);
 
-  // const fetchRandomArt = async () => {
-  //   try {
-  //     // replace db with ours
-  //     const response = await fetch('db');
-  //     const data = await response.json();
-  //     setArtPieces(data);
-  //   } catch (error) {
-  //     console.error('Error fetching random art:', error);
-  //   }
-  // };
+  useEffect(() => {
+    // Update artPieces state when data is fetched
+    if (data && data.artists) {
+      const allArtPieces = data.artists.flatMap((artist) => artist.artworks);
+      setArtPieces(allArtPieces);
+    }
+  }, [data]); // Run this effect whenever data changes
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error.message}</p>;
 
   return (
     <div className="galleryContainer">
       {artPieces.map((artPiece, index) => (
         <div key={index} className="artPieceContainer">
-          <img className="artImage" src={artPiece.imageURL} alt={`Art ${index + 1}`} />
+          <img
+            className="artImage"
+            src={artPiece.images[0]}
+            alt={`Art ${index + 1}`}
+          />
           <div className="overlay">
             <div className="overlayContent">
               <h3 className="artPieceTitle">{artPiece.title}</h3>
-              <p className="artPieceArtist">{artPiece.artist}</p>
               <p className="artPieceDescription">{artPiece.description}</p>
             </div>
           </div>

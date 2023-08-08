@@ -14,6 +14,7 @@ function FeaturedArtist() {
   return (
     <div className="backGround">
       <div className="homeContainer">
+        <h1>Featured Artists</h1>
         {artists.map((artist, index) => (
           <div key={index} className="artistContainer">
             <h2 className="artistName">
