@@ -14,6 +14,11 @@ const typeDefs = gql`
     password: String
   }
 
+  type Auth {
+    token: ID!
+    artist: Artist
+  }
+
   type ArtistName {
     firstName: String
     lastName: String
@@ -61,6 +66,11 @@ const typeDefs = gql`
     artists: [Artist]
     artworks: [Artwork]
     customers: [Customer]
+  }
+
+  type Mutation {
+    addArtist(username: String!, password: String!): Auth
+    login(username: String!, password: String!): Auth
   }
 `;
 

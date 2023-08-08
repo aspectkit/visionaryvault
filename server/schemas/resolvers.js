@@ -13,6 +13,9 @@ const resolvers = {
       return await Customer.find({}).populate("artworks favoriteArtists"); // Populate favoriteArtists
     },
   },
+  Mutation: {
+    
+  },
   Artist: {
     artworks: async (parent) => {
       return await Artwork.find({ artist: parent._id }).populate("customer");
