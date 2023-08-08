@@ -1,5 +1,5 @@
 const {Customer} = require('../models')
-
+const { signToken } = require('../utils/auth');
 module.exports = {
     async getCustomer(req, res) {
         try {
@@ -22,7 +22,7 @@ module.exports = {
         },
         async createCustomer(req, res) {
             try {
-                const customer = await customer.create(req.body);
+                const customer = await Customer.create(req.body);
                 res.json(customer);
             } catch (err) {
                 res.status(500).json(err);
@@ -30,7 +30,7 @@ module.exports = {
         },
         async updateCustomer(req, res) {
             try {
-                const customer = await customer.findByIdAndUpdate(
+                const customer = await Customer.findByIdAndUpdate(
                     {_id: req.params.customerId},
                     {$set: req.body},
                     {new: true, runValidators: true});
@@ -44,7 +44,7 @@ module.exports = {
         },
         async deleteCustomer(req, res) {
             try {
-                const customer = await customer.findByIdAndDelete(req.params.customerId);
+                const customer = await Customer.findByIdAndDelete(req.params.customerId);
                 if (!customer) {
                     return res.status(404).json({message: 'No Customer with this id!'});
                 }
@@ -52,4 +52,43 @@ module.exports = {
             } catch (err) {
                 res.status(500).json(err);
             }
-        }};
+        },
+        async login({body}, res) {
+            const customer = await Customer.findOne({ $or: [{ username: body.username }, { email: body.email }] });
+            if (!customer) {
+                return res.status(400).json({ message: "Can't find this user" });
+            }
+            const correctPw = await customer.isCorrectPassword(body.password);
+            if (!correctPw) {
+                return res.status(400).json({ message: 'Wrong password!' });
+            }
+            const token = signToken(customer);
+            res.json({ token, customer });
+        },
+
+      async saveArtwork({ customer, body }, res) {
+                try {
+                    const updatedCustomer = await Customer.findOneAndUpdate(
+                        { _id: customer._id },
+                        { $addToSet: { savedArtworks: body } },
+                        { new: true, runValidators: true }
+                    );
+                    return res.json(updatedCustomer);
+                } catch (err) {
+                    console.log(err);
+                    return res.status(400).json(err);
+                }
+            },
+            async deleteArtwork({ customer, params }, res) {
+                const updatedCustomer = await Customer.findOneAndUpdate(
+                    { _id: customer._id },
+                    { $pull: { savedArtworks: { artworkId: params.artworkId } } },
+                    { new: true }
+                );
+                if (!updatedCustomer) {
+                    return res.status(404).json({ message: "Couldn't find user with this id!" });
+                }
+                return res.json(updatedCustomer);
+            }
+    
+    };
