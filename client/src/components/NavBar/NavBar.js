@@ -101,7 +101,7 @@ function Navbar() {
                     </Link>
                 </li>
             </ul>
-            <div d-flex flex-row-reverse>
+            <div style={{ display: 'flex', flexDirection: 'row-reverse' }}>
           {Auth.loggedIn() ? (
             <button className="btn btn-lg btn-light m-2" onClick={logout}>
               Logout
