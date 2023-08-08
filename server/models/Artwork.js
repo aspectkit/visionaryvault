@@ -1,6 +1,7 @@
-const mongoose = require("mongoose");
+const {Schema , model} = require("mongoose");
 
-const artworkSchema = new mongoose.Schema({
+const artworkSchema = new Schema({
+  artworkId: { type: String, required: true },
   title: { type: String, required: true },
   year: { type: Number, required: true },
   type: {
@@ -43,6 +44,6 @@ const artworkSchema = new mongoose.Schema({
   customer: { type: mongoose.Schema.Types.ObjectId, ref: "Customer" }, // Reference to the customer who commissioned the artwork (optional)
 });
 
-const Artwork = mongoose.model("Artwork", artworkSchema);
+const Artwork = model("Artwork", artworkSchema);
 
 module.exports = Artwork;
