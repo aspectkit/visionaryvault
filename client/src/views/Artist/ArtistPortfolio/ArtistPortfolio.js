@@ -1,83 +1,64 @@
-import React from "react";
-import { Link } from 'react-router-dom';
-import BrushIcon from '@mui/icons-material/Brush';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import BrushIcon from "@mui/icons-material/Brush";
 import "./ArtistPortfolio.css";
-
-const loggedInUser = {
-  id: 1,
-  name: "John Doe",
-  profilePicture: "https://via.placeholder.com/150",
-  bio: "I'm a passionate artist with a love for colors and nature.",
-  photos: [
-    {
-      id: 101,
-      imageUrl: "https://via.placeholder.com/400",
-      title: "Sunset",
-      description: "A beautiful sunset over the mountains.",
-    },
-    {
-      id: 102,
-      imageUrl: "https://via.placeholder.com/400",
-      title: "Flower Garden",
-      description: "Vibrant flowers in a colorful garden.",
-    },
-    {
-      id: 103,
-      imageUrl: "https://via.placeholder.com/400",
-      title: "Flower Garden",
-      description: "Vibrant flowers in a colorful garden.",
-    },
-    {
-      id: 104,
-      imageUrl: "https://via.placeholder.com/400",
-      title: "Flower Garden",
-      description: "Vibrant flowers in a colorful garden.",
-    },
-    {
-      id: 105,
-      imageUrl: "https://via.placeholder.com/400",
-      title: "Flower Garden",
-      description: "Vibrant flowers in a colorful garden.",
-    },
-    {
-      id: 106,
-      imageUrl: "https://via.placeholder.com/400",
-      title: "Flower Garden",
-      description: "Vibrant flowers in a colorful garden.",
-    },
-    {
-      id: 107,
-      imageUrl: "https://via.placeholder.com/400",
-      title: "Flower Garden",
-      description: "Vibrant flowers in a colorful garden.",
-    },
-  ],
-};
+import { useQuery } from "@apollo/client";
+import { QUERY_ARTISTS } from "../../../utils/queries";
 
 function ArtistPortfolio() {
+  const { loading, error, data } = useQuery(QUERY_ARTISTS);
+
+  const [currentIndex, setCurrentIndex] = useState(0); // Moved useState to the top
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error.message}</p>;
+
+  const artists = data.artists;
+
+  const handleNextArtist = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % artists.length);
+  };
+
+  const handlePrevArtist = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? artists.length - 1 : prevIndex - 1
+    );
+  };
+
+  const artist = artists[currentIndex];
+
   return (
     <div className="artist-container">
+      <h1>Artist Profile</h1>
       <div className="profile">
         <img
-          src={loggedInUser.profilePicture}
-          alt={`${loggedInUser.name}'s profile`}
-          />
-          <h2>{loggedInUser.name}</h2>
+          src={artist.artistPicture}
+          alt={`${artist.artistName.firstName}'s profile`}
+        />
+        <h2>{`${artist.artistName.firstName} ${artist.artistName.lastName}`}</h2>
       </div>
-      <p className="bio">{loggedInUser.bio}</p>
+      <p className="bio">{artist.artistDescription.artistProfile}</p>
+      <div className="arrow-buttons">
+        <button onClick={handlePrevArtist}>← Previous</button>
+        <button onClick={handleNextArtist}>Next →</button>
+      </div>
       <div className="commissionButtonContainer">
         <Link to="/commission" className="commissionButton">
-          <span className='icon'><BrushIcon/></span>
-          <span className='title'>Purchase Artwork</span>
+          <span className="icon">
+            <BrushIcon />
+          </span>
+
+          <span className="title">Purchase Artwork</span>
         </Link>
       </div>
+
       <hr className="page-break" />
       <div className="image-grid">
-        {loggedInUser.photos.map((photo) => (
-          <div key={photo.id} className="image-item">
-            <img src={photo.imageUrl} alt={photo.title} />
-            <h3>{photo.title}</h3>
-            <p>{photo.description}</p>
+        {artist.artworks.map((artwork) => (
+          <div key={artwork._id} className="image-item">
+            <img src={artwork.images[0]} alt={artwork.title} />
+            <h3>{artwork.title}</h3>
+            <p>{artwork.description}</p>
           </div>
         ))}
       </div>
