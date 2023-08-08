@@ -5,8 +5,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin-top: 2%;
-  height: 100vh;
+  height: auto;
   border-width: 5px;
   border-image: linear-gradient(45deg, #954495, #023466, #993e3e) 1;
   border-image-slice: 1;
