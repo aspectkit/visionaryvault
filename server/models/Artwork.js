@@ -40,8 +40,8 @@ const artworkSchema = new Schema({
   images: [{ type: String }], // Array of image URLs or paths
   price: { type: Number }, // Optional price for the artwork
   isCommissioned: { type: Boolean, default: false }, // Indicates whether the artwork is currently being commissioned
-  artist: { type: mongoose.Schema.Types.ObjectId, ref: "Artist" }, // Reference to the artist who created the artwork
-  customer: { type: mongoose.Schema.Types.ObjectId, ref: "Customer" }, // Reference to the customer who commissioned the artwork (optional)
+  artist: { type: Schema.Types.ObjectId, ref: "Artist" }, // Reference to the artist who created the artwork
+  customer: { type: Schema.Types.ObjectId, ref: "Customer" }, // Reference to the customer who commissioned the artwork (optional)
 });
 
 const Artwork = model("Artwork", artworkSchema);
