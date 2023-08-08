@@ -64,8 +64,8 @@ function ArtistPortfolio() {
           <h2>{loggedInUser.name}</h2>
       </div>
       <p className="bio">{loggedInUser.bio}</p>
-      <div className="commission-button-container">
-        <Link to="/commission" className="commission-button">
+      <div className="commissionButtonContainer">
+        <Link to="/commission" className="commissionButton">
           Commission Artwork
         </Link>
       </div>
