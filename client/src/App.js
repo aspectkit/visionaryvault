@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
 import { ChakraProvider } from "@chakra-ui/react";
@@ -43,14 +43,14 @@ function App() {
       <ChakraProvider>
         <Router>
           <NavBar />
-          <Switch>
+          <Routes>
             <Route exact path="/" component={Home} />
             <Route path="/artistPage" component={ArtistPage} />
             <Route path="/gallery" component={Gallery} />
             <Route path="/about" component={About} />
             <Route path="/support" component={Support} />
             <Route path="/viewProfile" component={ArtistPortfolio } />
-          </Switch>
+          <Routes>
         </Router>
       </ChakraProvider>
     </ApolloProvider>
