@@ -1,22 +1,28 @@
 .galleryContainer {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    margin-top: 5%;
-}
-
-.artPieceContainer {
+    gap: 10px;
+    margin-top: 1%;
+    /* background: linear-gradient(90deg, #954495, #023466, #993e3e); */
+    padding: 80px;
+  }
+  
+  .artPieceContainer {
     position: relative;
     cursor: pointer;
     width: auto;
     height: auto;
-}
+    background-color: white;
+    border-radius: 10px;
+  }
 
-.artPieceImage {
+.artImage {
     width: 100%;
     height: auto;
     object-fit: cover;
     display: block;
+    border-radius: 10px;
+
 }
 
 .overlay {
@@ -31,6 +37,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 10px;
+
 }
 
 .artPieceContainer:hover .overlay {
@@ -55,3 +63,43 @@
 .artPieceDescription {
     font-size: 14px;
 }
+
+@media (max-width: 768px) {
+    .galleryContainer {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-top: 3%;
+    }
+    
+    .artPieceTitle {
+      font-size: 18px;
+    }
+    
+    .artPieceArtist {
+      font-size: 14px;
+    }
+    
+    .artPieceDescription {
+      font-size: 12px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .galleryContainer {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 5px;
+      margin-top: 2%;
+    }
+    
+    .artPieceTitle {
+      font-size: 16px;
+    }
+    
+    .artPieceArtist {
+      font-size: 12px;
+    }
+    
+    .artPieceDescription {
+      font-size: 10px;
+    }
+  }

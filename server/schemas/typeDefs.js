@@ -14,6 +14,11 @@ const typeDefs = gql`
     password: String
   }
 
+  type Auth {
+    token: ID!
+    artist: Artist
+  }
+
   type ArtistName {
     firstName: String
     lastName: String
@@ -21,22 +26,24 @@ const typeDefs = gql`
   }
 
   type ArtistDescription {
-    styleOfArt: [String!]!
+    styleOfArt: [String]
     artistProfile: String
   }
 
   type ContactInformation {
-    email: String!
-    phoneNumber: String!
-    country: String!
-    address: String!
+    email: String
+    phoneNumber: String
+    country: String
+    address: String
   }
 
   type Artwork {
     _id: ID
-    title: String!
+    title: String
     description: String
-    medium: String!
+    medium: String
+    images: [String]
+
     yearCreated: Int
     isCommissioned: Boolean
     artist: Artist
@@ -44,14 +51,14 @@ const typeDefs = gql`
   }
 
   type PriceRange {
-    minPrice: Float!
-    maxPrice: Float!
+    minPrice: Float
+    maxPrice: Float
   }
 
   type Customer {
     _id: ID
-    firstName: String!
-    lastName: String!
+    firstName: String
+    lastName: String
     contactInformation: ContactInformation
     artworks: [Artwork]
     favoriteArtists: [Artist]
@@ -61,6 +68,11 @@ const typeDefs = gql`
     artists: [Artist]
     artworks: [Artwork]
     customers: [Customer]
+  }
+
+  type Mutation {
+    addArtist(username: String!, password: String!): Auth
+    login(username: String!, password: String!): Auth
   }
 `;
 

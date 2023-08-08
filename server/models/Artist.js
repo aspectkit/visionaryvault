@@ -4,8 +4,8 @@ const bcrypt = require("bcrypt");
 
 const artistSchema = new Schema({
   artistName: {
-    firstName: { type: String, required: true },
-    lastName: { type: String, required: true },
+    firstName: { type: String, required: false },
+    lastName: { type: String, required: false },
     nickname: { type: String },
   },
   artistPicture: { type: String }, // Array of image URLs or paths
@@ -36,16 +36,16 @@ const artistSchema = new Schema({
           "sculpture",
           "other",
         ],
-        required: true,
+        required: false,
       },
     ],
-    artistProfile: { type: String, required: true },
+    artistProfile: { type: String, required: false },
   },
   contactInformation: {
-    email: { type: String, required: true },
-    phoneNumber: { type: String, required: true },
-    country: { type: String, required: true },
-    address: { type: String, required: true },
+    email: { type: String, required: false },
+    phoneNumber: { type: String, required: false },
+    country: { type: String, required: false },
+    address: { type: String, required: false },
   },
   artworks: [
     {
@@ -54,15 +54,15 @@ const artistSchema = new Schema({
     },
   ],
   commissionPriceRange: {
-    minPrice: { type: Number, required: true },
-    maxPrice: { type: Number, required: true },
+    minPrice: { type: Number, required: false },
+    maxPrice: { type: Number, required: false },
   },
   username: { type: String, required: true },
   password: { type: String, required: true },
 },
 
 {
-  toJSon: {
+  toJSON: {
     virtuals: true,
   },
 }

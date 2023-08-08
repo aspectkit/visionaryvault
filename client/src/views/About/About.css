@@ -1,18 +1,63 @@
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin-top: 10%;
-  }
-  
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: auto;
+  border-width: 5px;
+  border-image: linear-gradient(45deg, #954495, #023466, #993e3e) 1;
+  border-image-slice: 1;
+}
 
-  .carouselRow {
-    margin-top: 20px;
-  }
-  
+.carouselText {
+  font-size: 50px;
+  color: rgb(0, 0, 0);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
 
+.carouselText:hover {
+  font-size: 55px;
+  text-decoration: none;
+  color: rgb(169, 102, 231);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.8);
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin-top: 1%;
+  }
   .carouselText {
-    color: red;
+    font-size: 30px;
   }
+  .carouselText:hover {
+    font-size: 35px;
+  }
+}
+
+
+@media (max-width: 414px) {
+  .container {
+    top: -100px;
+  }
+  .carouselText {
+    font-size: 30px;
+  }
+  .carouselText:hover {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 375px) {
+  .container {
+    top: -10px;
+  }
+  .carouselText {
+    font-size: 30px;
+  }
+  .carouselText:hover {
+    font-size: 35px;
+  }
+}

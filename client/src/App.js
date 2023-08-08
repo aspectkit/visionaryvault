@@ -5,12 +5,14 @@ import { setContext } from "@apollo/client/link/context";
 import { ChakraProvider } from "@chakra-ui/react";
 
 import NavBar from "./components/NavBar/NavBar";
-import FeaturedArtist from "./views/Artist/ArtistPage/FeaturedArtist";
+import FeaturedArtist from "./views/Artist/FeaturedArtist/FeaturedArtist";
 import ArtistPortfolio from './views/Artist/ArtistPortfolio/ArtistPortfolio';
 import Gallery from "./views/Gallery/Gallery";
 import About from "./views/About/About";
 import Support from "./views/Support/Support";
 import CommissionForm from "./components/CommissionForm/CommissionForm";
+import Login from "./views/LogInSignUp/Login"
+import Signup from "./views/LogInSignUp/Signup"
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -44,6 +46,8 @@ function App() {
           <NavBar />
           <Switch>
             <Route exact path="/" component={FeaturedArtist} />
+            <Route path="/login" component={Login} />
+            <Route path="/signup" component={Signup} />
             <Route exact path="/featuredArtist" component={FeaturedArtist} />
             <Route path="/gallery" component={Gallery} />
             <Route path="/about" component={About} />
