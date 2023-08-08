@@ -36,6 +36,7 @@ function ArtistPortfolio() {
           alt={`${artist.artistName.firstName}'s profile`}
         />
         <h2>{`${artist.artistName.firstName} ${artist.artistName.lastName}`}</h2>
+        <h2>'{artist.artistName.nickname}'</h2>
       </div>
       <p className="bio">{artist.artistDescription.artistProfile}</p>
       <div className="arrow-buttons">
@@ -51,7 +52,13 @@ function ArtistPortfolio() {
           <span className="title">Purchase Artwork</span>
         </Link>
       </div>
+      <h3>{`Commission Price Range: $${artist.commissionPriceRange.minPrice}-$${artist.commissionPriceRange.maxPrice}`}</h3>
 
+      <h3>Contact Information</h3>
+      <p>{artist.contactInformation.email}</p>
+      <p>{artist.contactInformation.phoneNumber}</p>
+      <p>{artist.contactInformation.country}</p>
+      <p>{artist.contactInformation.address}</p>
       <hr className="page-break" />
       <div className="image-grid">
         {artist.artworks.map((artwork) => (
