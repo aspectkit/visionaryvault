@@ -61,39 +61,7 @@ function Home() {
 
   return (
     <div className="homeContainer">
-      {artists.map((artist, index) => (
-        <div key={index} className="artistContainer">
-          <h2 className="artistName">{artist.name}</h2>
-          <img
-            className="artistProfileImage"
-            src={artist.profilePicture}
-            alt={`${artist.name}'s profile`}
-          />
-          <p className="artistDescription">{artist.description}</p>
-          <div className="artworkContainer">
-            <img
-              className="artistArtWork"
-              src={artist.artwork1}
-              alt={`${artist.name}'s artwork 1`}
-            />
-            <img
-              className="artistArtWork"
-              src={artist.artwork2}
-              alt={`${artist.name}'s artwork 2`}
-            />
-            <img
-              className="artistArtWork"
-              src={artist.artwork2}
-              alt={`${artist.name}'s artwork 2`}
-            />
-            <img
-              className="artistArtWork"
-              src={artist.artwork2}
-              alt={`${artist.name}'s artwork 2`}
-            />
-          </div>
-        </div>
-      ))}
+      <h2>home</h2>
     </div>
   );
 }

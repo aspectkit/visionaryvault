@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './ArtistPage.css';
+import './FeaturedArtist.css';
 
 function Artist() {
 

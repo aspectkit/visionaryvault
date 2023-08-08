@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import "./ArtistPortfolio.css";
 
 const loggedInUser = {
@@ -63,6 +64,11 @@ function ArtistPortfolio() {
           <h2>{loggedInUser.name}</h2>
       </div>
       <p className="bio">{loggedInUser.bio}</p>
+      <div className="commission-button-container">
+        <Link to="/commission" className="commission-button">
+          Commission Artwork
+        </Link>
+      </div>
       <hr className="page-break" />
       <div className="image-grid">
         {loggedInUser.photos.map((photo) => (

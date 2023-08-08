@@ -26,7 +26,7 @@ return (
           <Link className='title' to='/'>Visionary Vault</Link>
             {/* <Search /> */}
             <Link className='pop' to="/"> Home </Link>
-            <Link className='pop' to="/artistPage"> Artist </Link>
+            <Link className='pop' to="/featuredArtist"> Featured </Link>
             <Link className='pop' to="/gallery"> Gallery </Link>
             <Link className='pop' to="/about"> About Us </Link>
             <Link className='pop' to="/support"> Support </Link>
