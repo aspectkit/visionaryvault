@@ -7,12 +7,12 @@ import { ChakraProvider } from "@chakra-ui/react";
 import NavBar from "./components/NavBar/NavBar";
 
 import Home from "./views/Home/Home";
-import ArtistPage from "./views/Artist/ArtistPage/ArtistPage";
+import FeaturedArtist from "./views/Artist/ArtistPage/FeaturedArtist";
 import ArtistPortfolio from './views/Artist/ArtistPortfolio/ArtistPortfolio';
 import Gallery from "./views/Gallery/Gallery";
 import About from "./views/About/About";
 import Support from "./views/Support/Support";
-
+import CommissionForm from "./components/CommissionForm/CommissionForm";
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -45,11 +45,12 @@ function App() {
           <NavBar />
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route path="/artistPage" component={ArtistPage} />
+            <Route path="/featuredArtist" component={FeaturedArtist} />
             <Route path="/gallery" component={Gallery} />
             <Route path="/about" component={About} />
             <Route path="/support" component={Support} />
             <Route path="/viewProfile" component={ArtistPortfolio } />
+            <Route path="/commission" component={CommissionForm} />
           </Switch>
         </Router>
       </ChakraProvider>
