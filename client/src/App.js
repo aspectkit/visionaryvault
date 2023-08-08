@@ -5,7 +5,7 @@ import { setContext } from "@apollo/client/link/context";
 import { ChakraProvider } from "@chakra-ui/react";
 
 import NavBar from "./components/NavBar/NavBar";
-import FeaturedArtist from "./views/Artist/ArtistPage/FeaturedArtist";
+import FeaturedArtist from "./views/Artist/FeaturedArtist/FeaturedArtist";
 import ArtistPortfolio from './views/Artist/ArtistPortfolio/ArtistPortfolio';
 import Gallery from "./views/Gallery/Gallery";
 import About from "./views/About/About";

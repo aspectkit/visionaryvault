@@ -60,6 +60,7 @@ function Artist() {
     ];
 
     return (
+      <div className='backGround'>
         <div className="homeContainer">
           {artists.map((artist, index) => (
             <div key={index} className="artistContainer">
@@ -74,6 +75,7 @@ function Artist() {
               </div>
             </div>
           ))}
+        </div>
         </div>
     );
 }
