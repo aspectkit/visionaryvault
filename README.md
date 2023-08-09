@@ -3,7 +3,7 @@
 ## Description
   This application lets customers and artist to meetup allowing the sale of current peices as well as comissions \
 ## Screenshots
-![Screenshot](https://github.com/kitdhing/visionaryvault/tree/main/client/src/views/assets/visonary.jpg)
+![Screenshot](https://github.com/kitdhing/visionaryvault/blob/main/client/src/views/assets/visonary.png)
 ## Table of Contents
 * [Installation](#installation)
 * [Features](#features)
