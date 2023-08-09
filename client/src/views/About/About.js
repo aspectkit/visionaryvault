@@ -2,8 +2,7 @@ import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import firstSlideImage from '../assets/hero.jpg';
 import secondSlideImage from '../assets/kit.jpg';
-import thirdSlideImage from '../assets/tylersmith.jpg';
-import fourthSlideImage from '../assets/tylersmith.jpg';
+import thirdSlideImage from '../assets/tylerSmith.jpg';
 import './About.css';
 
 
@@ -95,7 +94,7 @@ const About = () => {
                 className="d-block w-100"
                 // need to change these to group photos add links to pages
                 src={'https://ca.slack-edge.com/T04J07PPP6J-U04P1BJB1V2-0b9169fd3f93-512'}
-                alt="Third slide"
+                alt="Fourth slide"
               />
               <Carousel.Caption>
               <a href="https://portfolio-mlg-5051c4a15f65.herokuapp.com/" target='_blank' className='carouselText'>Michael Gibson</a>
