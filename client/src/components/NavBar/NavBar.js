@@ -103,15 +103,15 @@ function Navbar() {
             </ul>
             <div style={{ display: 'flex', flexDirection: 'row-reverse' }}>
           {Auth.loggedIn() ? (
-            <button className="btn btn-lg btn-light m-2" onClick={logout}>
+            <button className="btn btn-lg btn-light m-2 logoutButton" onClick={logout}>
               Logout
             </button>
           ) : (
             <>
-              <Link className="btn btn-lg btn-primary m-2" to="/login">
+              <Link className="btn btn-lg btn-primary m-2 loginButton" to="/login">
                 Login
               </Link>
-              <Link className="btn btn-lg btn-primary m-2" to="/signup">
+              <Link className="btn btn-lg btn-primary m-2 signupButton" to="/signup">
                 Signup
               </Link>
             </>

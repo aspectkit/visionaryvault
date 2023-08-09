@@ -270,8 +270,21 @@ transition: 2s;
   color: white;
   text-decoration: none;
 }
-
-
+.loginButton {
+  position: absolute;
+  left: 90%;
+  top: 1%;
+}
+.signupButton {
+  position: absolute;
+  left: 83%;
+  top: 1%;
+}
+.logoutButton {
+  position: absolute;
+  left: 83%;
+  top: .5%;
+}
 @media (max-width: 768px) {
   .navbarContainer {
     height: 15%;
@@ -296,6 +309,16 @@ transition: 2s;
 
   .visionary {
     display: none;
+  }
+  /* .loginButton{
+    display: none;
+  }
+  .signupButton{
+    display: none;
+  } */
+  .logoutButton {
+    top: 10%;
+    left: 10%;
   }
 }
 
