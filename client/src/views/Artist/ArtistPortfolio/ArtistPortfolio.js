@@ -43,22 +43,23 @@ function ArtistPortfolio() {
         <button onClick={handlePrevArtist}>← Previous</button>
         <button onClick={handleNextArtist}>Next →</button>
       </div>
-      <div className="commissionButtonContainer">
-        <Link to="/commission" className="commissionButton">
-          <span className="icon">
-            <BrushIcon />
-          </span>
+      <div className="commissionCard">
+        <div className="commissionButtonContainer">
+          <Link to="/commission" className="commissionButton">
+            <span className="icon">
+              <BrushIcon />
+            </span>
 
-          <span className="title">Purchase Artwork</span>
-        </Link>
+            <span className="title">Purchase Artwork</span>
+          </Link>
+        </div>
+        <h3 className="commissionPrice">{`Commission Price Range: $${artist.commissionPriceRange.minPrice}-$${artist.commissionPriceRange.maxPrice}`}</h3>
+        <h3 className="contactHeader">Contact Information</h3>
+        <p className="contactEmail">{artist.contactInformation.email}</p>
+        <p className="contactNum">{artist.contactInformation.phoneNumber}</p>
+        <p className="contactInfo">{artist.contactInformation.country}</p>
+        <p className="contactInfo">{artist.contactInformation.address}</p>
       </div>
-      <h3>{`Commission Price Range: $${artist.commissionPriceRange.minPrice}-$${artist.commissionPriceRange.maxPrice}`}</h3>
-
-      <h3>Contact Information</h3>
-      <p>{artist.contactInformation.email}</p>
-      <p>{artist.contactInformation.phoneNumber}</p>
-      <p>{artist.contactInformation.country}</p>
-      <p>{artist.contactInformation.address}</p>
       <hr className="page-break" />
       <div className="image-grid">
         {artist.artworks.map((artwork) => (

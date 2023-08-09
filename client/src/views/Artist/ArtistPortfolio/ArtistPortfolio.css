@@ -1,4 +1,5 @@
 .artist-container {
+
   text-align: center;
   padding: 20px;
   padding-top: 1%;
@@ -22,7 +23,15 @@
 .bio {
   margin-bottom: 20px;
 }
-
+.commissionCard {
+  border: 2px solid rgb(225, 0, 255);
+  height: auto;
+  width: 550px;
+  margin: 0 auto;
+  margin-top: 20px;
+  background: linear-gradient(45deg, #954495, #023466, #993e3e);
+  box-shadow: 0, 10px, 25px black;
+}
 .commissionButtonContainer {
   display: flex;
   justify-content: center;
@@ -50,7 +59,7 @@
   transition: all 0.2s ease-in-out;
   transition: color 1s;
   text-decoration: none;
-  margin: 10px;
+  margin: 40px;
 }
 
 .commissionButton:hover {
@@ -90,11 +99,19 @@
   text-shadow: 0, 10px, 25px black;
 }
 
+.contactHeader,
+.contactInfo,
+.contactNum,
+.contactEmail,
+.commissionPrice {
+  color: white;
+}
+
 .page-break {
   margin: 40px;
-  border: 1px solid;
+  border: 6px solid rgb(0, 0, 0);
   height: 5px;
-  background-image: linear-gradient(45deg, #954495, #023466, #993e3e);
+  background: linear-gradient(45deg, #954495, #023466, #993e3e);
 }
 
 .image-grid {

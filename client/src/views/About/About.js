@@ -59,45 +59,41 @@ const About = () => {
             <Carousel.Item>
               <img
                 className="d-block w-100"
-                // need to change these to group photos add links to pages
                 src={firstSlideImage}
                 alt="First slide"
               />
               <Carousel.Caption>
-              <a href="https://trace-martin.github.io/trace-martin-rport/" target='_blank' className='carouselText'>Trace Martin</a>
+              <a href="https://trace-martin.github.io/trace-martin-rport/" target='_blank' rel="noreferrer" className='carouselText'>Trace Martin</a>
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
               <img
                 className="d-block w-100"
-                // need to change these to group photos add links to pages
                 src={secondSlideImage}
                 alt="Second slide"
               />
               <Carousel.Caption>
-              <a href="https://kit-portfolio-5ee19e9fdc40.herokuapp.com/#about" target='_blank' className='carouselText'>Kit Dhingra</a>
+              <a href="https://kit-portfolio-5ee19e9fdc40.herokuapp.com/#about" target='_blank' rel="noreferrer" className='carouselText'>Kit Dhingra</a>
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
               <img
                 className="d-block w-100"
-                // need to change these to group photos add links to pages
                 src={thirdSlideImage}
                 alt="Third slide"
               />
               <Carousel.Caption>
-              <a href="https://github.com/TylerSmith2614" target='_blank' className='carouselText'>Tyler Smith</a>
+              <a href="https://github.com/TylerSmith2614" target='_blank' rel="noreferrer" className='carouselText'>Tyler Smith</a>
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
               <img
                 className="d-block w-100"
-                // need to change these to group photos add links to pages
                 src={'https://ca.slack-edge.com/T04J07PPP6J-U04P1BJB1V2-0b9169fd3f93-512'}
                 alt="Fourth slide"
               />
               <Carousel.Caption>
-              <a href="https://portfolio-mlg-5051c4a15f65.herokuapp.com/" target='_blank' className='carouselText'>Michael Gibson</a>
+              <a href="https://portfolio-mlg-5051c4a15f65.herokuapp.com/" target='_blank' rel="noreferrer" className='carouselText'>Michael Gibson</a>
               </Carousel.Caption>
             </Carousel.Item>
           </Carousel>
