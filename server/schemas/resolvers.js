@@ -17,7 +17,6 @@ const resolvers = {
   },
   Mutation: {
     addArtist: async (parent, {username, password}) => {
-      console.log("here");
       const artist = await Artist.create({username, password});
       
       const token = signToken(artist);
