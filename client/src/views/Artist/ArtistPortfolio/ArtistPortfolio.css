@@ -91,8 +91,8 @@
 }
 
 .page-break {
-  margin: 40px 0;
-  border: 0;
+  margin: 40px;
+  border: 1px solid;
   height: 5px;
   background-image: linear-gradient(45deg, #954495, #023466, #993e3e);
 }
