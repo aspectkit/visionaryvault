@@ -10,7 +10,6 @@ const CommissionForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form submitted:", name, money, want, email);
     let e1 = document.getElementById("name");
     e1.value = '';
     let e2 = document.getElementById("money");
